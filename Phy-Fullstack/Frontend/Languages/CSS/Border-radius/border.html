@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h2><u>BORDER RADIUS PROPERTY</u></h2></center>
+    <h3>Defination and usage of Border radius</h3>
+    <style>
+        #rcorners {
+          border-radius: 25px;
+          border: 2px solid #4c209c;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
+          background-color: aqua;
+
+        }
+        #image{
+
+            border-radius: 30px;
+          border: 4px solid #4c209c;
+          padding: 20px;
+          width: 400px;
+          height: 200px;
+          background-image:url(./img.jpg);
+
+        }
+        #Shape{
+            border-radius: 25px;
+          border: 2px solid #4c209c;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
+          background-color: rgb(6, 16, 16);
+            clip-path: polygon(50% 75%, 60% 9%, 99% 98%, 0 100%, 41% 9%);
+        }
+        </style>
+</head>
+<body>
+    <p>The border-radius property defines the radius of the element's corners.<br>
+
+        Tip: This property allows you to add rounded corners to elements!<br> 
+        
+        This property can have from one to four values. Here are the rules:<br>
+        
+        Four values - border-radius: 15px 50px 30px 5px; (first value applies to top-left corner, second value applies to top-right corner, 
+        third value applies to bottom-right corner, and fourth value applies to bottom-left corner):</p><br><br>
+        Example --------<br><br>
+       <h4>1) Set rounded corners for an element with a border:</h4>
+       <p>Add rounded corners for an element with a border:</p>
+
+       <div id="rcorners">This is the example for adding color with border</div><br><br>
+       <h4>1) Set rounded corners for an element with a border:</h4>
+       <div id="image">Exmaple for image with border</div><br><br>
+       <h4>3) To create different types of border we can use clip path for advanced<br>*Here I used clip path website to create this border</h4>
+       <div id="Shape">Here I used clip path to create this border </div>
+       
+</body>
+</html>
