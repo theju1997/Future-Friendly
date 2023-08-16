@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>HOC</u></h1></center>
+</head>
+<body>
+    <input type="number" value="0" id="num">
+<button onclick="caller()">click me </button>
+<script>
+let doER=(a,b,operation)=>{
+// ADDITION 
+    if(operation=="+")
+    {return a+b}
+
+    // SUBTRACTION
+    if(operation=="-")
+    {return a-b}
+
+    // multiplication
+    if(operation=="*")
+    {return a*b}
+
+    // Division
+    if(operation=="/")
+    {return a/b}
+
+
+}
+function calculator(op,doer){
+        let data=document.getElementById('num').value
+        console.log(data)
+            console.log(doer(4,6,op))        }
+
+     // Function calling
+
+   
+    function caller(){
+        calculator("-",dOER)
+    }
+    function caller(){
+        calculator("+",dOER)
+    }
+    function caller()
+    {
+        calculator("*",dOER)
+}
+function caller()
+    {
+        calculator("/",dOER)
+}
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><u><h1>IIFE(immedietely invokable function expression)</h1></u></center>
+</head>
+<body>
+    <h2>Defination of IIFE </h2>
+    <p>IIFE function means where we will declare the function<br>
+    immedietely we will call the function there itself that is called IIFE<br>
+    We will use this in Modular design pattern. </p>
+        <!-- (Function na declare madiro place le function na call madodhu ) -->
+        <h3>For example </h3>
+
+        <!-- <script>
+      {
+        function Lake(water)
+        {    console.log('${water}ran..'); } (try to get out put for this also)
+      } 
+        </script>
+<p id="demo"></p> -->
+
+<script>
+    // function declaration
+function myFunction(a, b) {
+//  function  call immideatly
+    return a * b;
+}
+document.getElementById("demo").innerHTML = myFunction(10, 2); 
+</script>
+
+
+</body>
+</html>
