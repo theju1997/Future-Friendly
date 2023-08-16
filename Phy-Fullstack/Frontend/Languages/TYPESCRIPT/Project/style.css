@@ -1,0 +1,36 @@
+
+/* if we took * css will apply for whole body */
+*{
+    /* if we give margin auto 
+    it will take alignment as auto */
+margin:auto;
+}
+/* body created under container */
+.container {
+
+    text-align: center;
+}
+/* for display changes "input" */
+input{
+font-size: 40px;
+border: 3px solid blue;
+width: 280px;
+}
+/* for button changes */
+button{
+    font-size: 32px;
+    width: 70px;
+    height: 60px;
+    background-color: rgb(43, 226, 73);
+}
+/* for calculator changes */
+.calculator {
+    background-color: blueviolet;
+    display: inline-block;
+    /* bg color is covering full container 
+    so i used display inline block */
+    padding: 11px; 
+    /* used padding to look bold */
+    border-radius: 22px;
+
+}
