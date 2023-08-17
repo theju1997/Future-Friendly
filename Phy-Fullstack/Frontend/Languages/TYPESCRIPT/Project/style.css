@@ -23,6 +23,7 @@ button{
     width: 70px;
     height: 60px;
     background-color: rgb(43, 226, 73);
+    border-radius: 15px;
 }
 /* for calculator changes */
 .calculator {
