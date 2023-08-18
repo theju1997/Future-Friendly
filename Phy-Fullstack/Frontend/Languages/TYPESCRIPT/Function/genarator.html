@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <center><h1><u>GENARATOR FUNCTION</u></h1></center>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <h2>Explination of Genarator function </h2>
+    <title>Document</title>
+    <p>
+        In this function we are going 
+        to stop repeating task
+    </p>
+</head>
+<body>
+    <script>
+    
+    function* fruitSeller()
+    {
+        yield "apple1"
+        yield "apple2"
+        yield "apple3"
+
+    }
+    let friendTaking=fruitSeller()
+    console.log("friend",friendTaking.next())
+    console.log("friend",friendTaking.next())
+    console.log("friend",friendTaking.next())
+    console.log("friend",friendTaking.next())
+
+    console.log("p1",fruitSeller().next())
+    console.log("p2",fruitSeller().next())
+    console.log("p3",fruitSeller().next())
+
+    </script>
+</body>
+</html>
