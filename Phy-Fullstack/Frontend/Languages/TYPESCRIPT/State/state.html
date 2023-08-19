@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>State</u></h1></center>
+    <h2>Defination</h2>
+    <!-- Example for state coffee condition is it hot or cool -->
+    <p>State describes the status of the entire program or an individual object.<br> 
+        It could be text, a number, a boolean, or another data type. <br>
+        It's a common tool for coordinating code. For example, once you update state,<br> 
+        a bunch of different functions can instantly react to that chang</p>
+        <h2>We have 3 types of State</h2>
+       <ol><li>Pending: the promise is still in the works.</li>
+        <li>Fulfilled: the promise resolves successfully and returns a value. </li>
+        <li>Rejected: the promise fails with an error.</li></ol>
+        
+</head>
+<h2>Example----</h2>
+<body>
+    <h1 id="print"></h1>
+    <button onclick="increment()" style="font-size: 20px;">click me for increment state</button><br><br>
+    <button onclick="decrement()" style="font-size: 20px;">click me for decrement state</button>
+
+    <script>
+        let h1=document.getElementById('print')
+        // increment
+          let num=0
+        function increment(){
+        h1.innerHTML=num++
+        }
+// Decrement
+        let number=0
+        function decrement(){
+        h1.innerHTML=num--
+        }
+    </script>
+</body>
+</html>
