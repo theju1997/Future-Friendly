@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1>Promise</h1></center>
+    <h2>Defination of Promise</h2>
+    <p>A Promise is an object representing the eventual completion 
+        or failure of an asynchronous operation. </p>
+    <b>For example inspect this page</b>
+    <!-- (Birthday party treat in resort and taj hotel story to remember) -->
+
+</head>
+<body>
+    <script>
+        // let tejuPromiss=new Promise((amrutha,schana)=>{
+        //     setTimeout(()=>{
+        //          amrutha('people every one come finally amith sold kidney')
+        //     //schana('i told she will not give party ')
+        //     },2000)
+           
+        // })
+        
+        // console.log(tejuPromiss)
+        // tejuPromise.then((a)=>{console.log("ambrutha",a)})
+        // tejuPromise.catch((a)=>{console.log("sajana",a)})
+        
+        let p1=250
+         
+        let p2 =new Promise((res,not)=>{
+            setTimeout(()=>{
+                res(250)
+        },2000)
+        
+         })
+        
+        let p3=250
+        
+        p2.then((per2)=>{
+            let total=p1+per2+p3
+        console.log(total)
+        })
+        </script>
+        <h2>We have some topics under Promise</h2>
+        <p>Then</p>
+        <p>Pending</p>
+        <p>Catch</p>
+        <p>Asynch</p>
+        <p>await</p>
+        <a href="./Fetch/fetch.html">Fetch</a>
+        
+</body>
+</html>
