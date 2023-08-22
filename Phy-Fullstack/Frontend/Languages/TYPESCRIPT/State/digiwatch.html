@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <center><h1><u>Digital Watch</u></h1></center>
-    <link rel="stylesheet" href="./style.css">
+  <title>Digital Watch javaScript</title>
+  <h1><center>Digital Watch</center></h1>
+  <style>
+
+    #digital-watch {
+    font-size: 30px;
+    color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background-color: #c1ca13;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(19, 202, 25, 0.2);
+
+    }
+    
+  </style>
 </head>
 <body>
-   <center> <div class="watch" style="font-size: 35px;">
-        <div id="time" class="time">00:00:00</div>
-      </div>
-      <script src="script.js"></script></center>
+  <center>
+  <div id="digital-watch">
+    
+  <script>
+    // set interval repeate every 1000mili second 
+    // toLocaleTimeString() this method convert into a human readable 
+    // new date to create new data object to get the current time.
+    setInterval(() => digitalWatch.textContent = new Date().toLocaleTimeString(), 1000);
+    const digitalWatch = document.getElementById('digital-watch');
+  </script>
+  
+  </div>
+  </center>
 </body>
 </html>
