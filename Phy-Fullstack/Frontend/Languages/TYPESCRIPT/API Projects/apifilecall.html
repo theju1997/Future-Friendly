@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // this is the way to call api files(important)
+         async function apicaller(){
+            let api=fetch("https://fakestoreapi.com/products");
+            api=await(await api).json();
+            console.log(api); 
+         }
+          apicaller()
+
+    </script>
+   
+    
+</body>
+</html>
