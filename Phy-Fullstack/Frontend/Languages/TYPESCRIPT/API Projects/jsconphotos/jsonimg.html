@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1>API Display</h1></center>
+    <center><h2>Topic :Json Photos</h2></center>
+    <style>
+        body{
+            background-image: url(./flip.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- here we created one id to get element -->
+ <div id="root123">
+ </div> 
+ <button onclick="docfile()"> ClICK HERE</button>
+    <script>
+
+let div=document.getElementById('root123')
+
+async function docfile(){
+   let data= fetch('https://jsonplaceholder.typicode.com/photos')
+
+   data=await(await data).json()
+   console.log(data)
+   data.map((item)=>
+    {
+    let h1=document.createElement('h1')
+    h1.innerHTML=item.id
+    div.appendChild( h1)
+
+    
+    let h2=document.createElement('h2')
+    h2.innerHTML=item.albumId
+    div.appendChild( h2)
+
+    
+    let h3=document.createElement('h3')
+    h3.innerHTML=item.title
+    div.appendChild( h3)
+
+    let h4=document.createElement('h4')
+    h4.innerHTML=item.thumbnailUrl
+    div.appendChild( h4)
+
+   let h5=document.createElement(h5)
+   h5.innerHTML=item.url
+   div.appendChild(h5)
+//    last one is not displaying
+})
+}
+docfile()
+
+    </script>
+</body>
+</html>

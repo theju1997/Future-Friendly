@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1>API Display</h1></center>
+    <center><h2>Topic :Flipkart</h2></center>
+    <style>
+        body{
+            background-image: url(./flip.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- here we created one id to get element -->
+ <div id="root">
+ </div> 
+ <button onclick="repeat()"> ClICK HERE</button>
+    <script>
+// here we getting element from id as root
+let div=document.getElementById('root')
+// here we are using asyn function becouse to controle to write "then" twice
+async function repeat(){
+   let data= fetch('https://fakestoreapi.com/products')
+//    here fecthing api data from the link
+   data=await(await data).json()
+// The await operator is used to wait for a Promise and get its fulfillment value. 
+   console.log(data)
+//    we are checking console to check what is there in data .
+    // let mydata=[{name:'hello'},{name:'world'}](sir created to explain me)
+
+    data.map((item)=>
+    {
+    let h1=document.createElement('h1')
+    h1.innerHTML=item.id
+    div.appendChild( h1)
+
+    // The JavaScript appendChild() method is used to insert a new node or reposition 
+    // an existing node as the last child of a particular parent node.
+    // (append child kottila andre next price,description will not print)
+
+    let h2=document.createElement('h2')
+    h2.innerHTML=item.title
+    div.appendChild(h2)
+
+    let h3=document.createElement('h3')
+    h3.innerHTML=item.description
+    div.appendChild(h3)
+
+    let h4=document.createElement('h4')
+    h4.innerHTML=item.price
+    div.appendChild(h4)
+})
+}
+repeat()
+// here we using repeat byz to print same thing repeatedy when we do the refresh 
+// in place of repeat we can give any name
+    </script>
+</body>
+</html>

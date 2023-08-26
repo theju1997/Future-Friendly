@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1>API Display</h1></center>
+    <center><h2>Topic :Pokemon</h2></center>
+</head>
+<body>
+    <!-- main step -->
+    <div id="pokemon">
+    </div>
+     <script>
+        // step1
+        let div=document.getElementById("pokemon")
+        // step 2
+        async function notes()
+        {
+        let data=fetch('https://pokeapi.co/api/v2/pokemon/')
+        data=await(await data).json()
+        console.log(data)
+        // step 3
+        data1.map((item)=>{
+           let h1=document.createElement(h1)
+           h1.innerHTML=item.name
+           div.appendChild(h1)
+
+        })
+    }
+notes()
+     </script>
+</body>
+</html>
