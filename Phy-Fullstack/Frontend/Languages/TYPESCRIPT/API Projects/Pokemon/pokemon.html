@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <center><h1>API Display</h1></center>
-    <center><h2>Topic :Pokemon</h2></center>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokemon API Names</title>
+<center><h1>API DISPLAY</h1></center>
+<center><h1>POKEMON</h1></center>
 </head>
 <body>
-    <!-- main step -->
-    <div id="pokemon">
-    </div>
-     <script>
-        // step1
-        let div=document.getElementById("pokemon")
-        // step 2
-        async function notes()
-        {
-        let data=fetch('https://pokeapi.co/api/v2/pokemon/')
-        data=await(await data).json()
-        console.log(data)
-        // step 3
-        data1.map((item)=>{
-           let h1=document.createElement(h1)
-           h1.innerHTML=item.name
-           div.appendChild(h1)
+<table id="pokemonTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
 
-        })
-    }
-notes()
-     </script>
+<script>
+// Function to create a clickable link
+function createLink(url) {
+  const link = document.createElement('a');
+  link.href = url;
+  link.textContent = url;
+  link.target = '_blank'; // Open link in a new tab
+  return link;
+}
+
+// Fetch data from the API
+fetch('https://pokeapi.co/api/v2/pokemon/')
+  .then(response => response.json())
+  .then(data => {
+    const pokemonTable = document.getElementById('pokemonTable').getElementsByTagName('tbody')[0];
+
+    data.results.forEach(pokemonInfo => {
+      const row = document.createElement('tr');
+      
+      const nameCell = document.createElement('td');
+      nameCell.textContent = pokemonInfo.name;
+      row.appendChild(nameCell);
+
+      const urlCell = document.createElement('td');
+      const link = createLink(pokemonInfo.url);
+      urlCell.appendChild(link);
+      row.appendChild(urlCell);
+
+      pokemonTable.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+</script>
 </body>
 </html>
