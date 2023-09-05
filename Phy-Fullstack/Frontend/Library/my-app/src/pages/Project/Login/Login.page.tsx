@@ -6,11 +6,10 @@ export const Login:React.FC<{}>=()=>{
    let [emailVal,setEmailVal]= useState('')
    let [passwordVal,setPasswordVal]= useState('')
    let navigate=useNavigate()
+   
     return <>
     <Box style={{ height: '100vh'}}>
         <Paper>
-
-        
         <Toolbar/>
         <Grid container spacing={2}>
             <Grid xs={2}></Grid>
@@ -21,7 +20,7 @@ export const Login:React.FC<{}>=()=>{
         direction="column"
         justifyContent="center"
         alignItems="center">
-            <h1>login form</h1>
+            <h1>Login Form</h1>
             <TextField value={emailVal}
             id="outlined-basic"
              label="email" 

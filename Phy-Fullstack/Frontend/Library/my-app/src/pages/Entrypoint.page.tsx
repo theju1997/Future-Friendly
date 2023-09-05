@@ -12,8 +12,8 @@ export const Entrypoint:React.FC<{}>=()=>{
   justifyContent="center"
   alignItems="center"
 >
-    <Link to="/lessons/lesssons">
-<Button>lesons</Button></Link>
+    <Link to="/lessons/lessons">
+<Button>lessons</Button></Link>
 <Link to='/project/login'>
 <Button>Projects</Button>
 </Link>

@@ -14,6 +14,7 @@ import { MyUseStateHook } from '../Hook/MyUseStateHook';
 import { MyUseEffect } from '../Hook/MyUseEffect';
 import { TwowaysofCss } from '../2waysofcss/TwowaysofCss';
 import { H1 } from '../../pages/lessons/Elements/H1';
+
 export let MyTabs:React.FC<{}>=()=>{
   const [value, setValue] = React.useState ('1');
 
@@ -33,7 +34,6 @@ console.log("newValue",typeof newValue)
             <Tab label="fragment" value="4" />
             <Tab label="hookes" value="5" />
             <Tab label="TwowaysofCss" value="6" />
-            
           </TabList>
         </Box>
         <TabPanel value="1"><MyProps/></TabPanel>
@@ -64,7 +64,6 @@ console.log("newValue",typeof newValue)
 <h1><center>Two ways of Css</center></h1>
 <TwowaysofCss></TwowaysofCss>
         </TabPanel>
-      
       </TabContext>
     </Box>
   );

@@ -21,10 +21,10 @@ export const Register:React.FC<{}>=()=>{
         direction="column"
         justifyContent="center"
         alignItems="center">
-            <h1>Register form</h1>
+            <h1>Register Form</h1>
             <TextField value={nameVal}
             id="outlined-basic"
-             label="name" 
+             label="Name" 
              variant="outlined"
              onChange={(e)=>{
                 setNameVal(e.target.value)
@@ -33,7 +33,7 @@ export const Register:React.FC<{}>=()=>{
             <br />
             <TextField value={emailVal}
             id="outlined-basic"
-             label="email" 
+             label="E-mail" 
              variant="outlined"
              onChange={(e)=>{
                 setEmailVal(e.target.value)
@@ -43,7 +43,7 @@ export const Register:React.FC<{}>=()=>{
             <TextField
             value={passwordVal}
              id="outlined-basic"
-              label="password" 
+              label="Password" 
               variant="outlined"
               onChange={(e)=>{setPasswordVal(e.target.value)}}
                type="password"/>

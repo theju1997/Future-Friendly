@@ -15,7 +15,7 @@ export let myLessonsList={
             path:'ele',
             element:<H1/>
         },{
-            path:'lesssons',
+            path:'lessons',
             element:<Lessons/>
         }
     ]
