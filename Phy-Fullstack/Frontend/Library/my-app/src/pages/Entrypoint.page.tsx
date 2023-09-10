@@ -1,5 +1,7 @@
 import { Box, Button, Grid, Paper } from "@mui/material"
+import { scryRenderedComponentsWithType } from "react-dom/test-utils"
 import { Link } from "react-router-dom"
+import { fileURLToPath } from "url"
 
 export const Entrypoint:React.FC<{}>=()=>{
     return <>
@@ -12,10 +14,9 @@ export const Entrypoint:React.FC<{}>=()=>{
   justifyContent="center"
   alignItems="center"
 >
-    <Link to="/lessons/lesssons">
-<Button>lesons</Button></Link>
-<Link to='/project/login'>
-<Button>Projects</Button>
+    
+<Link to="/lessons/lesssons"><Button>lessons</Button></Link>
+<Link to='/project/login'><Button>Projects</Button>
 </Link>
             
 </Grid>
@@ -24,3 +25,7 @@ export const Entrypoint:React.FC<{}>=()=>{
     
     </>
 }
+// her we connect lessons and project in entry point
+// 1)in my tab file have all components
+// 2)Lessons.page file have all tab file 
+// 3)entry point have all lessons and project

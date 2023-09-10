@@ -31,12 +31,12 @@ export const Home:React.FC<{}>=()=>{
             </Col>
         </Row>
         <br />
-        <h1>api way</h1>
+        <h1>Here we used API Way to Display</h1>
         <Row>
-{apiData.map((item:any)=>{return <Col><MyMuiCard img={item.image}/></Col>})}
+        {apiData.map((item:any)=>{return <Col><MyMuiCard img={item.image}/></Col>})}
         </Row>
         <br />
-        <h1>nor mal way</h1>
+        <h1>Here we used Normal Way to Display</h1>
         <Row>
             <Col>
             <MyMuiCard img={img}/>
