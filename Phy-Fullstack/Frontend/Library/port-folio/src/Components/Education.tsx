@@ -1,4 +1,4 @@
-export const Education:React.FC<{}>=()=>{
+gitexport const Education:React.FC<{}>=()=>{
 
     return<>
     <h1>Hii Im Thejaswini I Studied Msc in Computerscience at Oxford college of sciecne</h1>
