@@ -1,9 +1,9 @@
 
-let {MongoClient}=require('mongodb')
-let myaddress="mongodb://127.0.0.1:27017"
+let {MongoClient1}=require('mongodb')
+let myurl="mongodb://127.0.0.1:27017"
 
-let client=new MongoClient(myaddress)
-let dbName="Learn-Backend"
+let client1=new MongoClient(myaddress)
+let db="Learn-Backend"
 
 async function dbLink1(){
   await  client.connect();
@@ -15,3 +15,4 @@ async function dbLink1(){
  console.log("inserted")
 }
 dbLink1()
+
