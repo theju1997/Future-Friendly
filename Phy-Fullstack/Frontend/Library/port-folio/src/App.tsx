@@ -5,9 +5,8 @@ import { Project } from "./Components/Project.List"
 import { Skills } from "./Components/Skills"
 import { Portfolio } from "./pages/Portfolio.page"
 import {Router,Routes,Route} from 'react-router-dom'
+
 export const App:React.FC<{}>=()=>{
-
-
   return <>
 <center><h1 style={{color: 'red', backgroundColor: 'white'}}>PORTFOLIO</h1></center>
 <Routes>
