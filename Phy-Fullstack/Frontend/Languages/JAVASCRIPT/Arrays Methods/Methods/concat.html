@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1><u>Concat</u></h1></center>
+    <h2>Defination</h2>
+    <p>If we want to merge two variable values in one variable we can use this concat method</p>
+    <h2>Example</h2>
+<p id="box1"></p>
+<p id="box2"></p>
+<p id="box3"></p>
+
+<script>
+let fruits=["Orange","Mango","grape","Banana"]
+let veg=["carot","Beans","Tamato","Onion","Aloo"]
+let basket=fruits.concat(veg);
+document.getElementById("box1").innerHTML=fruits.join("||");
+document.getElementById("box2").innerHTML=veg;
+document.getElementById("box3").innerHTML=basket;
+
+</script>
+
+</body>
+</html>

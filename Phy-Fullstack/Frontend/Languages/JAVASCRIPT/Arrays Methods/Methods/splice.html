@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1><u>Splice</u></h1></center>
+    <h2>Defination</h2>
+    <p>We can use Splice method to add array values in particularly required place</p>
+    <h2>Example</h2>
+<p id="box"></p>
+<script>
+let fruits=["Orange","Mango","grape","Banana"]
+document.getElementById("box").innerHTML=fruits.splice(2,0,"kiwifruit","Pomogranate");
+document.getElementById("box").innerHTML=fruits;
+
+</script>
+
+</body>
+</html>

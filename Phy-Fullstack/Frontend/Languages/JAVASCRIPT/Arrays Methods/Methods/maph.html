@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Map Method</u></center></h1>
+    <h2>What is Map</h2>
+    <p>Creates a new array by performing a function on each array element  </p>
+<h3>Example</h3>
+<p id="box"></p>
+</head>
+<body>
+    <script>  
+    
+    let num1=[20,40,50,80,100,120];
+    let num2=num1.map(myFunction);
+    document.getElementById("box").innerHTML=num2;
+    function myFunction(value){
+        return value*2;
+    }
+        
+        
+        
+        </script>
+
+
+
+
+</body>
+</html>
