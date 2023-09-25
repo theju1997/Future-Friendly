@@ -8,4 +8,4 @@ b=60 #60 is assigned the value of b
 c=a+b 
 print(c)'''
 
-print('Here we can see how to give multiline comment')
+print('Here we can see how to give multiline comment symbol is('''....''')')
