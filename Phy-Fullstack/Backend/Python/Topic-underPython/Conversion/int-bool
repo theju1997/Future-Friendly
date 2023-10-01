@@ -1,0 +1,10 @@
+#EXAMPLE FOR INTERGER TO BOOL
+p=10
+q=40
+r=p+q
+print(r)
+print(bool(r))
+
+#OUTPUT
+#50
+#True
