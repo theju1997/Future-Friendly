@@ -5,6 +5,7 @@ const transporter = nodemailer.createTransport({
    auth: {
       user: "thejaswinitr@gmail.com",
       pass: "smimcdagaknkrdps"
+      // got this pw from personal email in setting option
    }
 });
 

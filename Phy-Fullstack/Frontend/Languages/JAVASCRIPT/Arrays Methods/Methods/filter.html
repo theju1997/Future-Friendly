@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Filter Method</u></center></h1>
+    <h2>What is filter method how it will work?</h2>
+    <p>Creates new array with array elements which passes a test</p>
+</head>
+<body>
+    <h2>Example</h2>
+    <p id="box"></p>
+    <script>
+    let num = [20,34,26,38,27,25];
+    let above20=num.filter(myFunction);
+    document.getElementById("box").innerHTML=above20;
+    function myFunction(value, index, array ){
+        return value>20;
+    }
+
+    </script>
+</body>
+</html>

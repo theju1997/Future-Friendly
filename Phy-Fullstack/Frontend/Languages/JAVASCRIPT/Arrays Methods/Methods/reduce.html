@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Reduce Method</u></center></h1>
+    <h2>Reduce method how it will work?</h2>
+    <p>Runs a function on each array element to produce a single value.It will work from left to right</p>
+</head>
+<body>
+    <h2>Example</h2>
+    <p id="box"></p>
+    <script>
+    let sum=[30,30,40,45,60];
+    let sum1=sum.reduce(myFunction);
+    document.getElementById("box").innerHTML=sum1;
+// if we used any function we should mention the element in function
+    function myFunction(value, total, array, index){
+        return total+value;
+    }
+
+    </script>
+</body>
+</html>

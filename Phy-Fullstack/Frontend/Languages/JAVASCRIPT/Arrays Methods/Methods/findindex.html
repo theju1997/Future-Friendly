@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>FindIndex Method</u></center></h1>
+    <h2>Find Index method how it will work?</h2>
+    <p>It will give the index value of the first passed element compareing with the given number</p>
+</head>
+<body>
+    <h2>Example</h2>
+    <p>It is passing from 0,,1,2,3 so its giving 3 (45numeber is there in place index 3)</p>
+    <p id="box"></p>
+    <script>
+    let sum=[30,36,40,45,60];
+    let sum1=sum.findIndex(myFunction);
+    document.getElementById("box").innerHTML=sum1;
+// if we used any function we should mention the element in function
+    function myFunction(value, total, array, index){
+        return value>40;
+    }
+
+    </script>
+</body>
+</html>

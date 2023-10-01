@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Find Method</u></center></h1>
+    <h2>Find method how it will work?</h2>
+    <p>Returns the first array element that passes the first test function,<br>
+        (We will give one number ..which one will pass first that number that is find) </p>
+</head>
+<body>
+    <h2>Example</h2>
+    <p id="box"></p>
+    <script>
+    let sum=[30,30,40,45,60];
+    let sum1=sum.find(myFunction);
+    document.getElementById("box").innerHTML=sum1;
+// if we used any function we should mention the element in function
+    function myFunction(value, total, array, index){
+        return value>40;
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Some Method</u></center></h1>
+    <h2>Some method how it will work?</h2>
+    <p>It will check the values in the array list if it is there it will give True 
+        <br>If Its not there it will give False</p>
+</head>
+<body>
+    <h2>Example</h2>
+    <p id="box"></p>
+    <script>
+    let num = [20,34,26,38,27,25];
+    let above20=num.some(myFunction);
+    document.getElementById("box").innerHTML=above20;
+    function myFunction(value, index, array ){
+        return value>20;
+    }
+
+    </script>
+</body>
+</html>

@@ -20,14 +20,13 @@ let girlproducts=[
     {name:' nailpolish',image:'nail.jpg'},
     {name:' jacket',image:'jack.jpg'},
     {name:' makeup',image:'make.jpg'},
-
 ]
 function displayProducts(){
     girlproducts.map((item)=>{
-        let image=document.createElement('img')
-        image.src=item.image
-        image.style.width="200px",
-        image.style.height="200px",
-        div.appendChild(image)
+        let image1=document.createElement('img')
+        image1.src=item.image
+        image1.style.width="200px",
+        image1.style.height="200px",
+        div.appendChild(image1)
     })
 }
