@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "python": "^0.0.4",
     "typescript": "^5.2.2"
   }
 }
