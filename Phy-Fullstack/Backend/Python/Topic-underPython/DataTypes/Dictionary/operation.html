@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center>Crud/Curd Operation</center></h1>
+    <pre>
+        C-Create  key value
+        r-read--Fetching key value
+        u-modify key value
+        d-Delete (remove) key value.
+    </pre>
+</head>
+<body>
+    <h2>Examples on operaion</h2>
+    <h3>Create</h3>
+    <pre>  
+        y=dict(btech=2010, mtech=2012, phd=2023)<br>
+        y<br>
+        {'btech': 2010, 'mtech': 2012, 'phd': 2023}<br>
+        
+        y={'btech':2010 ,'mtech':2012 ,'phd':2023}<br>
+        y['btech']<br>
+        2010<br>
+        y['mtech']<br>
+        2012<br>
+        y['phd']<br>
+        2023<br>
+        
+        y['mba']<br>
+        Traceback (most recent call last):
+          File "pyshell#11", line 1, in module
+            y['mba']
+        KeyError: 'mba'
+
+    </pre>
+    <h3>Update</h3>
+    <pre>  
+        y['btech']=2009
+        y
+        {'btech': 2009, 'mtech': 2012, 'phd': 2023}
+        
+    </pre> 
+    <h3>Modify</h3>
+    <pre>  
+        my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+        my_dict
+        {'name': 'John', 'age': 25, 'city': 'New York'}
+        my_dict['age']=26
+        my_dict
+        {'name': 'John', 'age': 26, 'city': 'New York'}        
+    </pre> 
+    <h3>Delete</h3>
+    <pre>  
+        del y
+        y
+        Traceback (most recent call last):
+          File "pyshell#26", line 1, in module
+            y
+        NameError: name 'y' is not defined
+        
+    </pre>
+
+</body>
+</html>
