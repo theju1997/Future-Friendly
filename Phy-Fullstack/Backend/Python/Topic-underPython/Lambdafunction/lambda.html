@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Lamda function(anonymous)</u></h1></center>
+</head>
+<body>
+    <p>Lambda function also as anonymous function </p>
+    <p>By using lambda keyword, we can define the anonymous function</p>
+<p>We cannot call the lambda functions</p>
+<p>Is used execute only one time.</p>
+<h3>Syntax</h3>
+<p>lambda arguments : expression</p>
+<pre style="font-size: 15px;">
+<h3>using Normal function example</h3>
+def addition(a,b):
+      return a+b
+res=addition(5,6)
+print(res)
+                        Output:-
+                            11
+=================================================
+<h3>using lambda function example</h3>
+res=lambda a,b: a+b
+output=res(10,20)
+print(output)
+
+                        Output:-
+                            30
+=================================================
+<h3>More examples based on lambda function</h3>
+<p>we defined a lambda function(upper) to convert a string to its upper case using </p>
+   <pre style="font-size: 15px;">
+    str1 = 'GeeksforGeeks'
+
+    upper1= lambda string: str1.upper()
+    print(upper1(str1))
+       
+                        Output-
+                            GEEKSFORGEEKS
+    </pre>
+====================================================
+   
+<pre style="font-size: 15px;">
+    def cube(y):
+    return y*y*y
+    
+    lambda_cube= lambda y: y*y*y
+    
+    # using function defined
+    # using def keyword
+    print("Using function defined with `def` keyword, cube:", cube(5))
+    
+    # using the lambda function
+    print("Using lambda function, cube:", lambda_cube(5))
+
+                             Output
+ Using function defined with `def` keyword, cube: 125
+    Using lambda function, cube: 125
+======================================================       
+    <h4>Example of lambda function using if-else</h4> 
+    <pre style="font-size: 15px;">
+    Max=lambda a, b : aif(a > b) else b
+    print(Max(1, 2))
+
+                                     Output
+                                         2
+                     </pre>                                                                       
+    
+         
+
+</pre>
+</body>
+</html>

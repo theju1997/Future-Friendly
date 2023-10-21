@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <u><center><h1>Return statement</h1></center></u>
+</head>
+<body>
+    <ol>
+        <li>When ever control is reached to return keword in the funtion</li>
+        <li> Function returns by default none and end the function.</li>
+        <li>We can return multiple return statements.</li>
+        <li>Once first return statement reached and ignores the remaining statements.</li>
+        <li>A return statement is used to end the execution of the function call and “returns” the result </li>     	
+            </ol>
+            <b>Note</b><p>we call return as many time we want but it will consider only first retun value</p>
+            <h3>3 types of example</h3>
+            <pre style="font-size: 15px;">
+                Eg 1:-
+                def addition(a,b):
+                      c=a+b
+                 return c
+                x=addition(20,30)
+                print(x)
+
+                                        Output
+                                             50
+                =======================================
+                Eg 2:-
+                def addition(a,b):
+                      c=a+b
+                 return (if we are not mentioned return value we will get none)
+                x=addition(20,30)
+                print(x)
+
+                                         Output
+                                             None
+                =======================================
+                           
+                Eg 3:-
+                def addition(a,b):
+                      c=a+b
+                 return
+                      return
+                      return 20
+                x=addition(20,30)
+                print(x)
+
+                                            Output
+                                             None (becouse it has consider first return statement)
+                =======================================
+                
+            </pre>
+            <h3>Abs(-10)  = is a built in function return the positive value.</h3>
+            <h4>Method to convert the value postive to negative</h4>
+            def abs_theju(a)
+            <pre style="font-size: 15px;">
+                Eg :-
+                def abs_theju(a):
+                     if a<0:
+                          return -a
+                     else:
+                          return a
+                res=abs_theju(-24)(negative value)
+                print(res)
+                    
+                                         Output
+                                             24
+                ===========================================
+                Eg :-
+                def abs_theju(a):
+                     if a<0:
+                          return -a
+                     else:
+                          return a
+                res=abs_theju(-24)(Positive value)
+                print(res)
+                
+                                         Output
+                                             24
+                =========================================== 
+            </pre>
+</body>
+</html>

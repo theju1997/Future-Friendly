@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><u><h1>Global Variable</h1></u></center>
+    <p>	Variables that are created outside of a function are known as global variables.<br>
+        Global variables can be used by everyone, both inside of functions and outside.
+        </p>
+</head>
+<body>
+    <h3>Exmaple</h3>
+    <pre style="font-size: 15px;">
+        institute_name='apponix'
+        def f1_theju():
+            print(institute_name)
+            print("I like Blue")
+        def f1_Adi():
+            print(institute_name)
+            print("I like Red")
+        def f1_Shivu():
+            print(institute_name)
+            print("I like Black")
+        def f1_final():
+            print(institute_name)
+            print("I like magic color")    
+            f1_theju()
+            f1_Adi()
+            f1_Shivu()
+            f1_final()
+    </pre>
+               <h3>Output</h3>
+               <p>I like Blue</p>
+               <p>I like Red</p>
+               <p>I like Black</p>s
+               <p>I like Magic color</p>
+               <h2>If we want to access global variable in local</h2>
+               <pre style="font-size: 15px;">
+                b=10
+                def theju():
+                    global b
+                    print(b)
+                    a=40
+                    print(a)
+                    theju()
+               </pre>
+
+</body>
+</html>

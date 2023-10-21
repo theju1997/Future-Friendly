@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Local Variable</u></center></h1>
+    <p>A variable is only available from inside the region it is created. This is called scope.</p>
+<p>A variable created inside a function belongs to the local scope of that function, 
+    and can only be used inside that function.</p>
+</head>
+<body>
+     <h3>Example1</h3>   
+     <pre style="font-size: 15px;">
+        def myfunc():
+            x = 300
+            print(x)
+        myfunc()
+
+                                Output
+                                    300
+           </pre>
+           <h2>Function inside function</h2>
+           <p>The variable x is not available outside the function, 
+            but it is available for any function inside the function  </p>
+
+            <h3>Example2</h3>
+            <pre style="font-size: 15px;">
+                def myfunc():
+                x = 300
+                def myinnerfunc():
+                  print(x)
+                myinnerfunc()
+              
+              myfunc()
+              
+                                    Output
+                                        300
+              
+            </pre>
+        </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Recursion function</u></h1></center>
+</head>
+<body>
+    <h2>Explination with example</h2>
+    <pre style="font-size: 15px;">
+    •	It means that a function calls itself.This has the benefit of meaning that you can loop through data to reach a result.
+    •	Recursion is the process of defining something in terms of itself.
+    •	Calling the function by itself is called recursive invocation.
+    •	Recursive invocation leads the infinity.
+    •	To restrict the invocation, we are using while loop in below example.</pre>
+    <h3>Example</h3>
+        <pre>
+            Eg:-
+            i=1
+            def func():
+                    global i
+                    print(‘hi’)
+                     while i<5:
+                        i=i+1
+                    func()
+                func()
+        </pre>
+        <h3>output</h3>
+        <p>Hii </p>
+        <p>Hii </p>
+        <p>Hii </p>
+        <p>Hii </p>
+        <p>Hii </p>
+        =======================================================================
+<h3>Factorial of given number</h3>
+<pre style="font-size: 15px;">
+    def recur_fact(num):
+    if num==1:
+        return 1
+    else:
+        return num*recur_fact(num-1)
+res=recur_fact(5)
+print(res)
+</pre>
+     <h3>Output</h3>
+     <p>120</p>
+</body>
+</html>
