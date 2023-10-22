@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>From import</u></center></h1>
+    <p>We can acces only specific member from the module(file name is module,inside values are member) </p>
+    <p>No need to define Module name ,inside the print function</p>
+</head>
+<body>
+    <h3>Example</h3>
+    <h4>first.py(filename)</h4>
+          <pre style="font-size: 15px;">
+                 a=10
+                 b=20
+                 def f1():
+                 print('Hiiii')
+         <h3>Example</h3>
+    <h4>first.py(filename)</h4>
+          <pre style="font-size: 15px;">
+             from module import a,b,f1
+                 print(a)
+                 print(b)
+                 f1()
+                            Output
+                            10
+                            20
+                            Hiiii
+         </pre>
+</body>
+</html>

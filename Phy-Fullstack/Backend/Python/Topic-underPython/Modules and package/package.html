@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Package</u></center></h1>
+    <p>A package is a way of organizing related modules into a single directory hierarchy.</p>
+
+</head>
+<body>
+    <h2>Example</h2>
+    <pre style="font-size: 16px;">
+        my_package/
+        |-- __init__.py
+        |-- module1.py
+        |-- module2.py
+        |-- subpackage/
+            |-- __init__.py
+            |-- module3.py
+        
+            <h4>my_package/__init__.py </h4>
+            This file can be empty, or it can contain package-level initialization code.
+
+            <h4>my_package/module1.py</h4>
+            def function_in_module1():
+            print("Function in module1")
+
+            <h4>my_package/module2.py</h4>
+            def function_in_module2():
+            print("Function in module2")
+        
+
+            <h4>my_package/subpackage/module3.py</h4>
+            def function_in_module3():
+            print("Function in module3")
+
+            <h4>Now, we can use this package in another Python script</h4>
+            # main_script.py
+
+            # Importing the entire package
+            import my_package
+            
+            my_package.module1.function_in_module1()
+            my_package.module2.function_in_module2()
+            my_package.subpackage.module3.function_in_module3()
+
+
+            
+<b>Explination of package program</b>
+               <p>In this example, my_package is a package containing two modules (module1 and module2) and 
+                a subpackage (subpackage) with a module (module3). The main_script.py file demonstrates 
+                how to use this package by importing specific modules and calling functions from them.</p>
+        
+
+        
+    
+    </pre>
+</body>
+</html>
