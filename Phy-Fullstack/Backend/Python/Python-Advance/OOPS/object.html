@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Object</u></center></h1>
+</head>
+<body>
+    <h2>What is object?</h2>
+    <p>Physical existance of a class is nothing but object.</p>
+    <h3>Syntax</h3>
+    <p>reference variable=class name(Object)</p><br>
+    <h2>What is reference variable?</h2>
+    <p>The variable which stores the address of the object is called reference variable.</p>
+    <p>By using reference variable we can access properties and methods.</p><br>
+    <h2>What is self variable?</h2>
+    <p>Seft is a default variable which always pointing to current object</p><br>
+    <h2>Example</h2>
+    <p>For class, variable, object. reference name , self </p>
+    <pre style="font-size: 17px;">
+        class student:
+        def __init__(self,name,rollno,marks):
+            self.name=name
+            self.rollno=rollno 
+            self.marks=marks
+        def result(self):
+            print('my name is ',self.name)
+            print('my rollno is ',self.rollno)
+            print('my marks is ',self.marks)
+            print('==========================')
+       s1=student('theju',57,85)
+       s1.result()
+       s2=student('Adi',58,85)
+       s2.result()
+                                                OUTPUT
+                                                -------
+                                                my name is  theju
+                                                my rollno is  57
+                                                my marks is  85
+                                                ==========================
+                                                my name is  Adi
+                                                my rollno is  58
+                                                my marks is  85              
+    
+    </pre>
+
+</body>
+</html>

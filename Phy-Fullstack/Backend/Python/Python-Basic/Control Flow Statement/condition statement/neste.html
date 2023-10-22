@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Nested IF</u></h1></center>
+</head>
+<body>
+    <h2>Explination</h2>
+    <p>Nested if means Inside if block one more if block</p>
+    <h3>Syntax</h3>
+    <pre>
+        if condition:
+            block of statement
+        if condition:
+            block of statement
+        else:
+            block of statement
+    </pre>
+    <h2>Example </h2>
+               <pre style="font-size: 17px;">
+
+                #Example1
+
+                age=18
+                graduate=True
+                licence=True
+                if age>16:
+                    print('You are eligible for driving test')
+                if graduate:
+                    print('Very good have a great future')
+                if licence:
+                    print('Attend your driving test')
+                print('your not passed the test try it once')
+                print('============================================')
+
+                                                                OUTPUT
+                                                                -----
+                                                                You are eligible for driving test
+                                                                Very good have a great future       
+                                                                Attend your driving test
+                                                                your not passed the test try it once
+                                                               
+                
+                #Example2
+
+                age=18
+                graduate=False
+                licence=False
+                if age>15:
+                    print('You are eligible for driving test')
+                if graduate:
+                    print('Very good have a great future')
+                if licence:
+                    print('Attend your driving test')
+                print('your passed the driving test')   
+                print('============================================')
+
+                                                                 OUTPUT
+                                                                 -------
+                                                                    You are eligible for driving test
+                                                                    Very good have a great future       
+                                                                    Attend your driving test                                                                  ============================================
+                                                                    your passed the driving test
+                                                                    
+
+
+                </pre>
+</body>
+</html>

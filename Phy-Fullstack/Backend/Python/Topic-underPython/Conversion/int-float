@@ -1,7 +1,0 @@
-#EXAMPLE FOR INTERGER TO FLOAT
-p=10
-q=40
-print(float(p+q))
-
-#OUTPUT
-#50.0
