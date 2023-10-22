@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h2><center><u>filter()</u></center></h2>
+</head>
+<body>
+    <h3>Definition with Example</h3>
+    <p>`filter` is a higher-order function that is used to construct
+         an iterator from elements of an iterable for which a function returns true.</p>
+    <h4>syntax</h4>
+    <p>filter(function,object)</p>
+       <h3>Example</h3>
+
+       <b>Normal map method</b>
+       <pre style="font-size: 15px;">
+        t = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        def find(x):
+            return x % 2 == 0
+        
+        result = list(filter(find, t))
+        print(result)
+        
+                                            Output 
+                                            [2, 4, 6, 8, 10]  
+    ===================================================================
+   <b>lamda  method</b>
+      
+   t=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   result = list(filter(lambda x: x % 2 == 0, t))
+   print(result)
+   
+                                       Output 
+                                       [2, 4, 6, 8, 10]
+                                 
+          
+       </pre>
+
+    
+</body>
+</html>
