@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Range</u></h1></center>
+</head>
+<body>
+    <h2>Explination</h2>
+    <li>Range is a function</li>
+    <li>Range is a built in function</li>
+    <li>Its default start from '1'</li>
+    <li>Index value start from '0'</li>
+    <h2>3 Ways of range</h2>
+    <ol>
+        <li>range(start)</li>
+        <li>range(start,stop)</li>
+        <li>range(start,stop,step)</li>
+        <li>range(stop)</li>
+
+    </ol>
+    <h3>Examples on range</h3>
+    <pre style="font-size: 17px;">
+    for i in range(11):
+        print(i, end='  ')
+                               #Ouput
+                               #0  1  2  3  4  5  6  7  8  9  10 
+    for i in range(20,10,-2):
+        print(i, end='  ')                           
+                                #Ouput
+                               # 20  18  16  14  12
+    
+    for i in range(10,0,-1):
+        print(i, end='  ')                           
+                                #Ouput
+                               #10  9  8  7  6  5  4  3  2  1
+    
+    for i in range(20,10):
+        print(i, end='  ')                           
+                                #Ouput
+                               #No output python will not work backward direction(no -ve value)
+
+
+
+        </pre>
+
+</body>
+</html>
