@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+    <h1><center><u>Multiple Inheritance</u></center></h1>
+<p>Inheriting properties from multiple classes into single class</p>
+<b>Multiple parent to single child</b>
+</head>
+<body>
+    <pre style="font-size: 17px;">
+    class ramu:
+        def r1(self):
+            print('race bike')
+    class krishna:
+        def k(self):
+            print('Mini-cooper')
+    class theju(ramu,krishna):
+        def th(self):
+            print('swift')
+    t=theju()
+    t.th()
+    t.k()
+    t.r1()
+
+                                    Output
+                                    -------
+                                    swift
+                                    Mini-cooper
+                                    race bike
+    </pre>
+</body>
+</html>

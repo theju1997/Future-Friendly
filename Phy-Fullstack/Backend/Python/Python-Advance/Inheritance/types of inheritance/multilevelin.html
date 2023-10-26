@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Multilevel Inheritance</u></center></h1>
+<p>The concept of inheriting the properties from multiple class one after another 
+    is called multilevel inheritance</p>
+</head>
+<body>
+    <h3>Example</h3>
+    <pre style="font-size: 17px;">
+        
+        class grandpa:
+            def G1(self):
+                print('object class is a parent of grandfather(by default if dnt have any parent means, object class itself parent)')
+        class Father(grandpa):
+            def F1(self):
+                print('Grand father is a parent of father')
+        s=Father()
+        s.F1()
+        s.G1()
+        print(s.__str__())
+        
+                                                             OUTPUT
+                                                             -------
+                                                       Grand father is a parent of father
+                                object class is a parent of grandfather(by default if dnt have any parent means, object class itself parent)
+                                                            <__main__.Father object at 0x00000251E65A5AF0>
+
+                                                            
+
+
+    </pre>
+</body>
+</html>
