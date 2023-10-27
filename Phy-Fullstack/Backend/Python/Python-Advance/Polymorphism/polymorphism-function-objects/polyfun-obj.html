@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Polymorphism in Fucntion and objects</u></h1></center>
+    <p>IN this concept we will use for 2 class one object</p>
+</head>
+<body>
+    <h3>Example</h3>
+<pre style="font-size: 17px;">
+    class BMW:
+    def fuel_type(self):
+        print("Diesel")
+    
+    def max_speed(self):
+        print("Max speed is 200")
+
+class Swift:
+    def fuel_type(self):
+        print('Petrol')
+    
+    def max_speed(self):
+        print('Max speed is 150')
+
+def car_details(theju):
+    theju.fuel_type()
+    theju.max_speed()
+
+bmw = BMW()
+car_details(bmw)
+
+swift = Swift()
+car_details(swift)
+    
+                                        Output
+                                        ------
+                                        Diesel
+                                        Max speed is 200
+                                        Petrol
+                                        Max speed is 150
+
+    </pre>
+</body>
+</html>

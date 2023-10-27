@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Method overloading</u></h1></center>
+</head>
+<body>
+    <p>If two or more methods have same method 
+        with different parameter is know as method overloading</p>
+        <h2>Example</h2>
+        <pre style="font-size: 17px;">
+            class calculator:
+            def add(self,a,b):
+                print('i am a two parameters of addition',a+b)
+            def add(self,a,b,c):
+                print('i am a three parameters of addition',a+b+c)
+            def add(self,a,b,c,d):
+                print('i am a four parameters of addition',a+b+c+d)
+        c=calculator()
+        c.add(10,20,30,40)
+                                        Output
+                                        -------
+                                        i am a four parameters of addition 100
+        </pre>
+</body>
+</html>

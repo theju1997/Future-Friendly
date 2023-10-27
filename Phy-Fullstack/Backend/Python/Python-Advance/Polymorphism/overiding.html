@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Overriding built in method</u></center></h1>
+</head>
+<body>
+    <p>Note for my understanding</p>
+    <p>If we dont give anything inside the class,automatically 
+        it will give result as object class address(it will take built in function)</p>
+    <h3>Example</h3>
+<pre style="font-size: 17px;">
+class cart:
+    def __init__(self,b1,b2,b3):
+        self.b1=b1
+        self.b2=b2
+        self.b3=b3
+    def __len__(self):
+        return(len(self.b1)+len(self.b2)+len(self.b3))
+
+c=cart(['tops','saree','gown'],['phone','gold','laptop'],['roll','pizza']) 
+print(c)
+print(len(c))
+
+                                                                            Output
+                                                                            -------
+                                                                            <__main__.cart object at 0x0000029AC5D760C0>
+                                                                                8
+
+    </pre>
+</body>
+</html>
