@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Operator overloading</h1>
+    <p> dir(int)(to check magic method)<br>
+        step1:Check datatype left operand<br>
+        step2:go in that class<br>
+        step3:call __add__()method
+    </p>
+</head>
+<body>
+    <pre style="font-size: 17px;">
+
+    <h3>Example</h3>
+    num1='hello'
+    num2='theju'
+    print(num1+num2)
+    print(num1.__add__(num2))
+    print(str.__add__(num1,num2))
+
+                                            Output
+                                            -------
+                                            hello theju
+</pre>
+</body>
+</html>

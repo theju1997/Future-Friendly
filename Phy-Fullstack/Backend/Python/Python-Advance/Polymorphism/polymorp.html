@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Polymorphism</u></h1></center>
+</head>
+<body>
+    <p>It is an ability of the object to perform differently in different situation is called polymorphism</p>
+    <p>poly=many,morphimsm=form</p>
+    <h3>Example</h3>
+<pre style="font-size: 17px;">
+class vehicle:
+    def __init__(self, name, color, price):
+        self.name=name
+        self.color=color
+        self.price=price
+    def details(self):
+        print('Name of the vehicle:',self.name)
+        print('Color of vehicle:',self.color)
+        print('Price of the vehicle:',self.price)
+class truck(vehicle):
+    def max_speed(self):
+        print('maximum speed limit 100')
+    def gear(self):
+        print('Gear change is 4')
+class car(vehicle):
+    def max_speed(self):
+        print('maximum speed limit 150')
+    def gear(self):
+        print('Gear change is 5') 
+    
+t=vehicle('truck','red','500000')
+t.details()
+c=vehicle('car','blue','700000')
+c.details()
+
+                                Output
+                                ------
+                                Name of the vehicle: truck
+                                Color of vehicle: red
+                                Price of the vehicle: 500000
+                                Name of the vehicle: car
+                                Color of vehicle: blue
+                                Price of the vehicle: 700000
+</pre>   
+
+</body>
+</html>
