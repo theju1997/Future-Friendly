@@ -33,7 +33,24 @@
     <p>Instance method work on the instance variable</p>
     <h2>Example</h2>
     <pre style="font-size: 17px;">
+        class Employee:
+        def __init__(self, name, id, sal):
+            self.name=name
+            self.id=id
+            self.sal=sal
+        
+        def display(self):
+            print("Name is :",self.name)
+            print("Id is :",self.id)
+            print("Salary is :",self.sal)
+    e=Employee("Theju",17,30000)
+    e.display()
 
+                                OUTPUT
+                                -------
+                                Name is : Theju
+                                Id is : 17     
+                                Salary is : 30000
 
     </pre>
 

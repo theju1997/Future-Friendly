@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Class Variable</u></center></h1>
+</head>
+<body>
+    <p>Class variables are made for entire class(All on=bjects).<br>
+        only one copy is created and distributed to all objects.<br> 
+Modification is class variable impact of all objects </p>
+<h3>Example for Class variable</h3>
+<pre style="font-size: 17px;">
+    class Employee:
+    company_name='infosys'#class data
+    def __init__(self,name,sal):
+        self.name=name
+        self.sal=sal
+print(Employee.company_name)
+Employee.company_name='shivasys'
+print(Employee.company_name)
+e=Employee('Shankar',23000)
+print(e.company_name)
+teju=Employee('Shankar',23000)
+print(teju.company_name)
+teju.company_name='thejusys'
+print(teju.company_name)
+print(Employee.company_name)
+                                Output
+                                -------
+                                infosys
+                                shivasys
+                                shivasys
+                                shivasys
+                                thejusys
+                                shivasys
+     
+</pre>
+<h1><center><u>Class Method</u></center></h1>
+<p>Class method works on Class variable</p>
+<h3>Example for class method</h3>
+<pre style="font-size: 17px;">
+    class Employee:
+    company_name='Infosys'
+    def __init__(Self,name, salary):
+        self.name=name
+        self.salary=salary
+    @classmethod             #In class method we should use this code 
+    def display(cls):
+        print(cls.company_name)
+Employee.display()
+
+                                            OUTPUT
+                                            ------
+                                            Infosys
+</pre>
+</body>
+</html>

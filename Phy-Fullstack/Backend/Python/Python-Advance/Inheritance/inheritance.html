@@ -8,9 +8,51 @@
 <p></p>Acquiring the properties from the parent class(existing class) to child class(new class)
 </head>
 <body>
-    <h3>Example</h3>
+    <h3>Example 1</h3>
     <pre style="font-size: 17px;">
+    class Ravikanth:
+        house_name = 'Theju nilaya'
+    
+        def tmane(self):
+            print(self.house_name)
+    
+    class Suryakanth:
+        house_name1 = 'Adi nilaya'
+    
+        def amane(self):
+            print(self.house_name1)
+    
+    r1 = Ravikanth()
+    print(r1.house_name)
+    r1.tmane()
+    
+    s1 = Suryakanth()
+    print(s1.house_name1)
+    s1.amane()
+                                                    Output
+                                                    ------
+                                                    Theju nilaya
+                                                    Theju nilaya
+                                                    Adi nilaya
+                                                    Adi nilaya       
+                                                    
+<h3>Example 2</h3>
+class Employee:
+    bonus=2000
+    def display(self):
+        print("this emlpoyee class method")
 
+class Manager(Employee):
+    bonus=5000
+    def show(self):
+        print("this manager class method")
+
+m=Manager()
+print(m.bonus)
+
+                                                    Output
+                                                    ------
+                                                    5000
     </pre>
     <h2><a href="./constructor-in.html">Constructor Inheritance</a></h2>
     <h2><a href="">Types of Inheritance</a></h2>

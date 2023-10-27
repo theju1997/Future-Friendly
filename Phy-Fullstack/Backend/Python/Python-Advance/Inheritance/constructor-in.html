@@ -11,7 +11,20 @@
          (or derived class)inheriting the constructor of its super class(or base clas)</p>
          <h3>Example</h3>
          <pre style="font-size: 17px;">
-     
+        class Father:
+            def __init__(self):
+                print('father constructor called')
+                self.vehicle='Bike'
+                print(self.vehicle)
+        class son(Father):
+            pass
+        s=son()
+
+                                                    Output
+                                                    -------
+                                                    father constructor called
+                                                     Bike
+        
          </pre>
 
 </body>
