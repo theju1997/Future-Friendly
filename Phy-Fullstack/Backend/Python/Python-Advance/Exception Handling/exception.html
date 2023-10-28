@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Exception Handling</u></center></h1>
+
+
+</head>
+<body>
+    <h3>Syntax error</h3>
+    <p>Errors occurs because of syntax</p>
+    <p>Example---syntax error, typo error</p>
+    <h3>Runtime error</h3>
+    <p>Runtime error are synticatcly free . it occurs during execution of the program.</p>
+    <p>For different input.</p>
+    <p>Runtime errors are called exception.</p>
+<h3>Exception Handling have 3 keys</h3>
+<ol>
+    <li>Try</li>
+    Keep the code in try block which is going to raise an exception.
+    <pre>
+        syntax:
+        try:
+            block 
+            </pre>
+    <li>Except</li>
+    except block catch the exception and handles the exception.
+     <pre>
+        syntax:
+        except(exception):
+            block 
+    
+     </pre>
+
+    <li>Finally</li>
+       <p>Always execute if we get erro or not get error</p>
+       <p>If exception occured or not occured finally block is always executes</p>
+       <pre>
+        syntax 
+        finally:
+            block
+       </pre>
+
+</ol>
+<h3>Exception hierarchy in python</h3>
+<img src="./img.png" height="300px",width="500px">
+<h3>Example for try and except</h3>
+<pre style="font-size: 17px;">
+    a=int(input('Enter first number'))
+    b=int(input('Enter second number'))
+    try:
+        c=a/b
+    except(ZeroDivisionError):
+        print('Do notdivide by zero')
+    print(c)
+
+                                                Output
+                                               --------
+                                               Enter first number 10
+                                               Enter second number 5
+                                               2.0
+                                            ===============================
+                                               Enter first number 10
+                                               Enter second number 0
+                                               Do notdivide by zero
+                                               Traceback (most recent call last):
+                                                 File "e:\Apponix\Future-Friendly\Phy-Fullstack\Backend\Python\Python-Advance\Exception Handling\exception.py", line 7, in <module>
+                                                   print(c)
+                                                         ^
+                                               NameError: name 'c' is not defined
+
+
+ </pre>   
+ <h2>Python Inbuilt error</h2>
+ <p>we have 32 errors but we will handle only</p>
+ <li>ZeroDivisionError </li>
+ <li>Value error </li>
+ <li>Index error</li>
+ <pre style="font-size: 17px;">
+#to handle zero division erro
+    a=int(input('Enter first number'))
+    b=int(input('Enter second number'))
+    try:
+        c=a/b
+        print(c)
+    except(ZeroDivisionError):
+        print('Do notdivide by zero')
+    print('=============================')
+    
+#to handle value error
+    a=int(input('Enter first number'))
+    b=(input('Enter second number'))#dont give int
+    try:
+        x=int(a)
+        y=int(b)
+        c=x/y
+        print(c)
+    except(ZeroDivisionError):
+        print('Do notdivide by zero')
+    except(ValueError):
+        print('Do not enter alphabates')
+    print('=============================')
+    
+#Index error
+
+    try:
+        mylist=["a","b","c","d"]
+        id=int(input("Enter Id(1-4)"))
+        print("Your name is",mylist[id-1],"and your id is ",id)
+    except(ValueError):
+        print("do not enter string")
+    except(IndexError):
+        print('Index out of range')
+
+#finally
+        a=int(input('Enter first number'))
+        b=(input('Enter second number'))#dont give int
+        try:
+            x=int(a)
+            y=int(b)
+            c=x/y
+            print(c)
+        except(ZeroDivisionError):
+            print('Do not divide by zero')
+        except(ValueError):
+            print('Do not enter string')
+        finally:
+            print('I am always executing')
+        print('=============================')
+
+                                                    Output
+                                                    -------
+                                                    Enter first number 10
+                                                    Enter second number5
+                                                    2.0
+                                                    I am always executing    
+
+
+
+ </pre>
+ <h2>Default Except block</h2>
+ <li>Except block can handle any kind of exception error but we can convey only one message</li>
+ <h3>syntax</h3>
+ <pre style="font-size: 14px;">
+   syntax
+   except:
+        block
+ </pre>
+ <h2>Example</h2>
+ <pre>
+try:
+    mylist=["a","b","c","d"]
+    id=int(input("Enter Id(1-4)"))
+    print("Your name is",mylist[id-1],"and your id is ",id)
+except:
+    print("Error is occured")
+    
+                                  Output
+                                  -------
+                                  Error is occured
+ </pre>
+</body>
+</html>

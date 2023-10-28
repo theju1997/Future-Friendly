@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Abstraction</u></center></h1>
+    <p>It is used to hide the complexity of implementation and highlighting the services is know as abstraction</p>
+    <p>OR</p>
+    <p>It is defined as a process of handling complexity by hiding unnecessary information from the user.</p>
+    <h2><u>Abstract Method</u></h2>
+    <p>Any method with out implementaion with decorator abstract method is called abstract method</p>
+    <p>Abstract method is available in abc module</p>
+    <h2><u>Abstract Class</u></h2>
+    <p>Any class which inherits from AbC</p>
+    <p>ABC class is available in abc module</p>
+    
+</head>
+<body>
+    <h2>When we can creat object</h2>
+    <p>If class contains abstract method we can create object</p>
+    <p>If class contains abstract class we can create object</p>
+    <p>If class contains abstract class and also abstract method we can't creat object</p>
+    <h2>Example-1</h2>
+    <pre style="font-size: 17px;">
+        from abc import ABC,abstractmethod
+        class wifi(ABC):
+            @abstractmethod
+            def network(self):
+                pass
+        
+        class jio(wifi):
+            def network(self):
+                print('5g wifi with x')
+            def network1(self):
+                print('5g wifi with xy')
+        
+        class Airtel(wifi):
+            def network(self):
+                print('6g wifi with xyz')
+        
+        air=Airtel()
+        air.network()
+        
+        j=jio()
+        j.network()
+        j.network1()
+
+                                   Output
+                                   -------
+                                   6g wifi with xyz
+                                   5g wifi with x
+                                   5g wifi with xy
+    </pre>
+    <h2>Example-2</h2>
+    <pre style="font-size: 17px;">
+        #By using two methods 
+        from abc import ABC,abstractmethod
+        class wifi(ABC):
+            @abstractmethod #method
+            def network(self):
+                pass
+            @abstractmethod #method
+            def charges(self):
+                pass
+            def enjoy(self):#normal method
+                print('enjoy is norma method we can implement without creating class')
+        
+        class jio(wifi):
+            def network(self):
+                print('5g wifi with x')
+               
+        
+        class Airtel(jio):
+            def charges(self):
+                print(' 2 paise tariff')
+        
+        air=Airtel()
+        air.network()
+        air.charges()
+        air.enjoy()
+
+                                            Output
+                                            -------
+                                            5g wifi with x
+                                            2 paise tariff
+                                            enjoy is norma method we can implement without creating class
+    </pre>   
+    <h2>Interface----100% abstract methods</h2>
+    <h2>abstract class---It may contain abstract method and normal method</h2>
+</body>
+</html>
