@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Raise Statement</u></h1></center>
+    <p>Raise statement is used to raise predefined exception and also user defined exception</p>
+</head>
+<body>
+    <h2>Example</h2>
+    <p>raise ZeroDivisionError</p>
+    <p>raise ValueError</p>
+    <h1>User defined exception</h1>
+    <ol>
+        <li>Define the exception</li>
+        <li>Raise the user defined exception</li>
+        <li>Handle raised exception</li>
+    </ol>
+    <h2>Example </h2>
+    <pre style="font-size: 17px;">
+    class ValueTooSmallError(Exception):
+        pass
+    class ValueTooLargeError(Exception):
+        pass
+    g_num=10
+    while True:
+        try:
+            u_num=int(input('Enter the guessing number'))
+            if u_num<g_num:
+                raise ValueTooSmallError
+            elif u_num>g_num:
+                raise ValueTooLargeError
+            break
+        except(ValueTooSmallError):
+            print('The value is too small.try again!')
+        except(ValueTooLargeError):
+            print('The value is too small.try again!')
+    print('Congrats , your guessing number is correct')
+
+                                                        output
+                                                        ------
+                                                        Enter the guessing number 8
+                                                        The value is too small.try again!
+                                                        Enter the guessing number10      
+                                                        Congrats , your guessing number is correct
+    </pre>
+</body>
+</html>

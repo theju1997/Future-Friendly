@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Read</u></h1></center>
+
+</head>
+<body>
+    <h2>Methods of read</h2>
+    <ol>
+        <li>read() </li>
+        <p>read all the lines as string</p>
+        <li> read(n)</li>
+        <p>reads the number of characters</p>
+        <li>readline() </li>
+        <p>reads the one line at a time</p>
+        <li>readlines() </li>
+        <p>It reads all the lines and stores in to list</p>
+    </ol>
+    <h3>Example</h3>
+    <h4>sample.1 txt file saved file </h4>
+    <pre>I love Python
+    I hate coding
+    I need big salary
+    point has to be noted by avinash</pre>
+    <pre style="font-size: 17px;">
+        f=open('sample1.txt')
+        print(f.read())#to print whole paragraph
+        print(f.read(5)) #below out put for this line
+        f.close()#closeing the file
+                            output
+                            ------
+                            I lov
+                            </pre>
+    <h3>Examples on read methods</h3>
+    <pre style="font-size: 17px;">
+    #sample.txt File
+    
+        Hii I'm  Theju
+        I am learning python
+        This is file handling topic
+
+ #example for read
+
+        x=open('sample.txt','r')
+        print(x.read())
+        x.close()
+
+                 output
+                 --------
+                 Hii I'm  Theju
+                 I am learning python
+                 This is file handling topic
+        
+#Example for read(n)
+
+        x=open('sample.txt','r')
+        print(x.read(3))
+        x.close()
+                
+                 output
+                 -------- 
+                 Hii
+        
+#Example for readline()
+
+        x=open('sample.txt','r')
+        line1=x.readline().strip()
+        line2=x.readline()
+        print(line1)
+        print(line2)
+        x.close()
+
+                  output
+                 --------
+                 Hii I'm  Theju
+                 I am learning python
+
+            
+        
+#Example for readlines()
+        x=open('sample.txt','r')
+        line1=x.readlines()
+        print(line1)
+        x.close()
+                    
+                        output
+                        --------
+                        ["Hii I'm  Theju\n", 'I am learning python\n', 'This is file handling topic']
+            </pre>
+</body>
+</html>

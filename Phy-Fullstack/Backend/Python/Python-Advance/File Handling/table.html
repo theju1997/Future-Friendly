@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >
+        table,th,td{
+            border: 2px solid black;
+            text-align: center;
+        
+        }
+    </style>
+</head>
+<body>
+    <center><table style="width: 500px;">
+        <tr>
+            <th>Text file</th>
+            <th>Binary file</th>
+        </tr>
+        <tr>
+            <td>r...(Read mode)<br>
+                In read, file should be exist other wise we will get error
+                <br>We can read only data</td>
+            <td>rb</td>
+        </tr>
+        
+        <tr>
+            <td> w..(Write mode)<br>
+                If file is not there it creates the file.<br>
+                We can write only data.<br>
+                it overrites the new data<br> </td>
+            <td>wb</td>
+        </tr>
+        <tr>
+            <td> a..(Append Mode),<br>
+                If file is not there it creates the file<br>
+                we can append new data to existing data</td>
+            <td>ab</td>
+        </tr><tr>
+            <td> r+...(Readd and write) </td>
+            <td>rb+</td>
+        </tr><tr>
+            <td>w+...(Write and read) </td>
+            <td>wb+</td>
+        </tr><tr>
+            <td>a+....(Append and read)</td>
+            <td>ab+</td>
+        </tr><tr>
+            <td>x...(Explicity creates a file.) </td>
+            <td></td>
+        </tr>
+    </table></center>
+ 
+</body>
+</html>
