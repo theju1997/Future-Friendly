@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1)Find the total amount of all employees salary</h2>
+    <pre style="font-size: 17px;">
+        "id","name","salary","deptno"
+        101,shankar,20000,10
+        102,Sushma,30000,10
+        103,Prince,50000,20
+        104,Avinash,25000,20
+        105,Rachana,15000,30
+        106,Theju,80000,40
+    </pre>
+    <h4>Solution:-</h4>
+    <pre style="font-size: 17px;">
+        f=open('emp.txt','r')                   #open the file 
+        head=f.readline()                       #to read only one line
+        line=f.readlines()                      #to read all the line (lines will give in list)
+        print(line)                             #to print
+        total=0
+        for i in line:
+            w=i.strip().split(',')              #strip for clear the space back and front of the text 
+            sal=int(w[-2])                      #to print sal giving position of the sal
+            total=total+sal
+        print('Sum of all employees salary is:',total)
+        f.close()
+
+                                                    Output
+                                                    --------
+                                                    ['101,shankar,20000,10\n', '102,Sushma,30000,10\n', '103,Prince,50000,20\n', '104,Avinash,25000,20\n', '105,Rachana,15000,30\n', '106,Theju,80000,40']
+                                                    Sum of all employees salary is: 220000
+        </pre>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>With Statement</u></h1></center>
+<p>The with statement can be used while opening a file , 
+    we can use the operation statements</p>
+    <p>With in a block</p>
+    <p>The advantage of with statement is it will take care closing of the file</p>
+</head>
+<body>
+    <h3>syntax</h3>
+    <pre style="font-size: 17px;">
+    with open(path,mode)as  alias:
+        statement1
+        statement2
+        ;
+        ;
+        ;
+        statement n
+        </pre>
+        <h3>Example</h3>
+    <pre style="font-size: 17px;">
+with open('theju.txt','w')as f:
+    f.write('Advantage of with statement')
+    f.write('It will close the file automatically')
+
+                                                        Output
+                                                        -------
+                                                        Advantage of with statement 
+                                                        It will close the file automatically
+
+    </pre>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Find the character,lines,words in the text</h2>
+    <pre style="font-size: 17px;">
+        Self Introduction 
+        Thank you for giving me this opportunity to introduce my 
+        My self Thejaswini TR
+        I am learning python Fullstack
+        
+        k      
+     </pre>
+<h4>soution:-</h4>
+    <pre style="font-size: 17px;">
+        x=open('sample.txt','r+')
+        x.write('Self Introduction \n' 'Thank you for giving me this opportunity to introduce my \n'  'My self Thejaswini TR\n' 'I am learning python Fullstack\n')
+        print(x)
+        x.close()
+        char_count = 0
+        word_count = 0
+        line_count = 0
+        with open('sample.txt', 'r') as file:
+            for i in file:
+                line_count += 1  # Increment the line count
+                char_count += len(i)  # Increment the character count
+                words = i.split()  # Split the line into words
+                word_count += len(words)  # Increment the word count
+        
+        # Output the results
+        print("Character count:", char_count)
+        print("Word count:", word_count)
+        print("Line count:", line_count)
+
+        
+                                                        Output
+                                                        --------
+                                                        Character count: 133
+                                                        Word count: 22
+                                                        Line count: 6
+    </pre> 
+
+    
+</body>
+</html>

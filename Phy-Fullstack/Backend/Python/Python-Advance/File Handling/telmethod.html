@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Tell and Seek Method</u></center></h1>
+    <h2><u>Tell method</u></h2>
+    <p>Tel the position of the file pointer</p>
+    <h2><u>Seek method</u></h2>
+    <p>It is used to move the curser in required position</p>
+<p></p>
+</head>
+<body>
+    <h2>Example for Tell and Seek</h2>
+    <pre style="font-size: 17px;">
+        f=open('student.txt','w')                         #To open and write the file(to create file)
+        f.write('All students are Stupids')               #To write the file
+        f.close()                                         #To close the file
+        with open('student.txt','r+')as f:                #To read and write the file
+            text=f.read()                                 #To read the file
+            print(text)
+            print('the current cursor position',f.tell())  #to ask the cursor place
+            f.seek(17)                                     #to place the cursor in 17 th place
+            print('the current cursor position',f.tell())
+            f.write('Gems!!')                              #to change the word from 17th place
+            print('the current cursor position',f.tell())
+            f.seek(0)                                      #to move the cursor begining place
+            text=f.read()
+            print('data after modification')
+            print(text)                                    #to print the text
+                  
+                       Output
+                       -------
+                       All students are Stupids
+                       the current cursor position 24
+                       the current cursor position 17
+                       the current cursor position 23
+                       data after modification
+                       All students are Gems!!s
+    </pre>
+</body>
+</html>

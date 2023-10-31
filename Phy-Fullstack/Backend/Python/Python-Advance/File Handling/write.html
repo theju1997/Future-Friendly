@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Write</u></h1></center>
+    <h3>Two methods in write</h3>
+    <ol><li>write()</li>
+    <li>write lines()</li></ol>
+   
+</head>
+<body>
+    <h2 style="color: rgb(57, 47, 255);">--write()</h2>
+    <p>write is used write text into the file .</p>
+    <h4>Example</h4>
+    <pre style="font-size: 17px;">
+    f=open('theju.txt','w')
+    f.write('I am developer \n')
+    f.write('I am a python developer')
+    f.close()
+    Note: it will create the file.
+                                Output
+                                -------
+                                I am developer
+                                I am a python developer (it will print in the file theju.txt)</pre>
+    <h2 style="color: rgb(57, 47, 255);">--write lines()</h2>
+    <p>write lines used to write lines into the file by taking list of lines<br>
+        (means it will print line by line if we gave in list)</p>
+    <h4>Example</h4>
+    <pre style="font-size: 17px;">
+        f=open('theju.txt','w')
+        list1=['I am a theju \n','I like to do coding \n',]
+        f.writelines(list1)
+        f.close()
+                                       Output
+                                       =======
+                                       I am a theju
+                                       I like to do coding</pre>
+</body>
+</html>
