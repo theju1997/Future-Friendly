@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1)How to change the word by using seek and tell mtheod</h2>
+    <pre style="font-size: 17px;">
+        f=open('student.txt','w')
+        f.write('All students are Stupids')
+        f.close()
+        with open('student.txt','r+')as f:
+            text=f.read()
+            print(text)
+            print('the current cursor position',f.tell())
+            f.seek(17)
+            print('the current cursor position',f.tell())
+            f.write('Gems!!')
+            print('the current cursor position',f.tell())
+            f.seek(0)
+            text=f.read()
+            print('data after modification')
+            print(text)
+                  
+                                                        Output
+                                                        --------
+                                                        All Students are Gems.
+                  
+                  
+        
+    </pre>
+    
+</body>
+</html>

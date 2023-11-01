@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <center><h1><u>Pickling</u></h1></center>
+</head>
+<body>
+    <h3>Serialization</h3>
+    <p>The concept of storing the python object into the binary file is called pickling or serialization</p>
+
+    <h4>Example</h4>
+    <pre style="font-size: 17px;">
+        import pickle
+
+        data=[['Shivanshis',7398,200],['Shanthi',7368,300],['Theju',7598,600]]
+        print(data)
+        f=open('picex.txt','wb')
+        pickle.dump(data,f)
+        f.close()
+        
+    </pre>
+    <h3>De-Serialization</h3>
+    <p>Reading data from binary file and converting to the python object is called unpickling or deserialization.</p>
+    <h4>Example</h4>
+    <pre style="font-size: 17px;">
+    import pickle
+
+    data=[['Shivanshis',7398,200],['Shanthi',7368,300],['Theju',7598,600]]
+    f=open('picex.txt','rb')
+    data=pickle.load(f)
+    print(data)
+    f.close()
+    </pre>
+</body>
+</html>
