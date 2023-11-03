@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><u><center>Sqlite</center></u></h1>
+</head>
+<body>
+    <h2>Introduction</h2>
+    <p>SQLite is used to develop embedded software for devices like televisions,
+         cell phones, cameras, etc.<br> It can manage low to medium-traffic HTTP requests.<br> 
+         SQLite can change files into smaller size archives with lesser metadata. <br>
+         SQLite is used as a temporary dataset to get processed with some data within 
+         an application</p>
+         <h2>Why use SQLite instead of SQL?</h2>
+         <p>SQLite is a fast and efficient database system that can handle moderate 
+            amounts of data,<br> 
+            whereas MS SQL Server is designed to handle large amounts of data and 
+            can deliver high performance for read and write operations.</p>
+            <h2>How to connect Python to Sqlite3?</h2>
+            <pre style="font-size: 17px;">
+      step1:  Check Sqlite3 connection in python file.
+               import sqlite3(code)
+               we will get empty without any error(output)
+               
+      step2:   Connect database
+               con=sqlite3.connect('Info.db')
+               print(con)
+               con.close()
+               sqlite3.Connection object at 0x0000018061E2E200(output)
+
+      step3:   Create 
+              (syntax for creating table)
+              con.execute('''create table student(ID integer primary key,Name text,Email text,Phone integer)''')
+              (output we should check it in sqlite3 online viewer in google)
+              ---click on file
+              ---open DB
+              ---choose the table name from saved place
+              ---to check the table content (Select * from tablename;(run))
+
+      step4:   Insert 
+             (syntax for insert table)
+             con.execute("insert into student values(1,'Theju','theju@gmail.com',8756787)")
+             con.execute("insert into student values(2,'Dhanu','dhanu@gmail.com',9875678)")
+             con.execute("insert into student values(3,'varsha','var@gmail.com',8465678)")
+             (output we should check it in sqlite3 online viewer in google)
+             ---click on file
+             ---open DB
+             ---choose the table name from saved place
+             ---to check the table content (Select * from tablename;(run))
+
+      step5:  Update
+             (syntax for update table)
+             con.execute ('''update avi set name="shiva" where name="shankar"''')
+
+      step6:  Delete 
+             (syntax for Delete particular name)
+             con.execute("delete from student where Name='Unkonw' ")
+        
+            </pre>
+</body>
+</html>

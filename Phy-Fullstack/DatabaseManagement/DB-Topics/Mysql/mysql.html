@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><u><center>MySql</center></u></h1>
+    <p>Python can be used in database applications.</p>
+    <p>One of the most popular databases is MySQL.</p>
+    <p> MySQL is generally faster and more efficient than SQLite. 
+       This is because MySQL uses a separate server to run,</p>
+</head>
+<body>
+    <h2>How to install MYSQL and How to create table</h2>
+    <pre style="font-size: 17px;">
+     step1 : we have to check pymysql module is there or not 
+                import pymysql is module(code)
+
+     step2 :  module---pip install pymysql(code if pip is not there)
+                PIP to install "MySQL Connector".
+
+     step3 : we have to check mysql connector is there or not
+                import mysql.connector(code)
+                #if this page is executed with no errors, you have the "mysql.connector" module installed.
+                  -------While installing mysql-------
+                  Add user------user name, password we should give
+                  we should select local host 
+     step4 : Create database name
+     
+     step5 : Create connection     
+                con=pymysql.connect(
+                host='localhost',
+                user='rooter',
+                password="admin",
+                db="trip",
+                )
+                print(con)#to connect mysql to db 
+     
+     step6 : plan=con.cursor   
+     
+     step7 : create table 
+                plan.execute('''create table magzin(SlNO int(5),Placename varchar(10),Price int,Date date)''')
+     
+     step8 : Insert values
+                plan.execute('''insert into magzin values(102,"Kedarnath",40000,"2024-08-24")
+       
+     step9 : Update
+                plan.execute('''update magzin set Retrundate = "2024-09-10" where SlNO=102''')         
+    
+     step 10: Alert
+                plan.execute('''alter table magzin add(Retrundate)''')
+    
+     step 11: To see the table
+               show table tablename;
+
+     step 12: To see the content inside the table
+               select * from tablename;
+
+     step 13 : To delete table
+                drop table tablename;          
+    
+            </pre>
+    
+
+</body>
+</html>

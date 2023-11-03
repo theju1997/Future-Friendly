@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><u><center>Regular Expression(re)</center></u></h1>
+      <p>Regular expression is a pattern by using special characters we can 
+        find the data or we can verify the data.</p>
+        <h2>Re-Functions</h2>
+        <ol>
+            <li>re.match() </li>
+            <p>Returns a Match object if there is a match first word in the string</p>
+            <li>re.search()</li>
+            <p>Returns a Match object if there is a match anywhere in the string</p>
+            <li>re.findall()</li>
+            <p>Returns a list containing all matches</p>
+            <li>re.split()</li>
+            <p>Returns a list where the string has been split at each match</p>
+            <li>re.sub()</li>
+            <p>Replaces one or many matches with a string</p>
+        </ol>
+        <h3>Example on Functions</h3>
+        <pre style="font-size: 17px;">
+            Example 
+            ========
+        #Example for match() in regular expression
+
+            import re
+            data='lakshmi is python faculty 12pm  batch or your favourite avinash student'
+            pattern='lakshmi'
+            result=re.match(pattern,data)
+            print(result)
+
+        #Example for search() in regular expression
+
+            import re
+            data='lakshmi is python faculty 12pm  batch or your favourite avinash student'
+            pattern='python'
+            result=re.search(pattern,data)
+            print(result)
+
+        #Example for findall() in regular expression
+
+            import re
+            data='lakshmi is python faculty 12pm  batch or your favourite avinash student python '
+            pattern='python'
+            result=re.findall(pattern,data)
+            print(result)
+
+        #Split the string at every white-space character:
+            import re
+            txt = "The rain in Spain"
+            x = re.split("\s", txt)
+            print(x)
+
+        #Replace all white-space characters with the digit "9":
+
+            import re
+            txt = "The rain in Spain"
+            x = re.sub("\s", "9", txt)
+            print(x)
+            
+                           Output
+                       ==============
+            re.Match object; span=(0, 7), match='lakshmi'
+            re.Match object; span=(11, 17), match='python'
+            ['python', 'python']
+            ['The', 'rain', 'in', 'Spain']
+            The9rain9in9Spain
+
+        </pre>
+        <h1><a href="./rechar.html">Regular Expression Charactors</a></li></h1>
+        
+</head>
+<body>
+    
+</body>
+</html>
