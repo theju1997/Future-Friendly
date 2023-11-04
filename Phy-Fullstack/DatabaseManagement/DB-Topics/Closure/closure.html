@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Closure</u></center></h1>
+<p>Inner function is closeing in the outer function so its called closure</p>
+</head>
+<body>
+    <h2>Inner Function Example</h2>
+    <pre style="font-size: 17px;">#Inner function
+        def outerfunction():
+            a=10
+            def innerfunction():
+                b=20
+                print(a+b)
+            innerfunction()
+            print(a)
+        
+        outerfunction()</pre>
+        <h2>Closure Example</h2>
+  <pre style="font-size: 17px;">
+    def enter_number_outer():
+        numbers=[]
+    def enter_number_inner(x):
+        numbers.append(x)
+        print(numbers)
+    return enter_number_inner
+
+enter_num=enter_number_outer()
+enter_num(3)
+enter_num(4)
+enter_num(7)
+                                  Output
+                                  =====
+                                  [3]
+                                  [3, 4]
+                                  [3, 4, 7]
+  </pre>  
+</body>
+</html>

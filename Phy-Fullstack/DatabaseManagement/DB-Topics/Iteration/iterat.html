@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Iterators</u></center></h1>
+</head>
+<body>
+    <pre style="font-size: 17px;">
+iterators is a object which is used to iterate the elements.
+In Python, an iterator is an object that allows us to traverse a container or sequence of elements,
+such as a list, tuple, or string. It provides a way to access the elements of a collection one by one 
+without needing to know the underlying structure or implementation details.
+
+Iterators in Python offer a simple and efficient approach to loop over elements in a collection, making 
+them an essential concept in Python programming.
+
+An iterable is any object that can return an iterator, while an iterator is an object that provides the __next__() 
+method, which retrieves the next element in the sequence.
+
+Note: When an iterator is exhausted and has no more elements to offer, it raises a StopIteration exception.
+
+To create our own iterator, we define a class that implements the iterator protocol. The class should have the __iter__() 
+method, which returns the iterator object itself, and the __next__() method, which retrieves the next element. Within the __next__() method, 
+we can perform any necessary computations or logic to determine the next value in the sequence.
+    </pre>
+    <h2>Example</h2>
+    <pre style="font-size: 17px;">
+        class TopTen:
+        def __init__(self):
+            self.num=1
+        def __iter__(self):
+            return self
+        def __next__(self):
+            if self.num<=10:
+                val=self.num
+                self.num+=1
+                return val
+            else:
+                raise StopIteration
+    values=TopTen()
+    it=iter(values)
+    print(next(it))
+    print(next(it))
+    print(next(it))
+    print(next(it))
+    print(next(it))
+    print(next(it))
+    print(next(it))
+    print(next(it))
+    print(next(it))
+    print(next(it))
+                         Output
+                         ------
+                         1
+                         2
+                         3
+                         4
+                         5
+                         6
+                         7
+                         8
+                         9
+                         10
+
+      
+    </pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Genarator</u></center></h1>
+
+</head>
+<body>
+    <p>we use iterator to print or fetch values at a time
+
+        Withour using any class we will generate elements. by using generator function.
+        
+        Ans:Generator is a function that returns on object(iterator)which we can iterate over (one value at time)
+        yield keyword:Is going to return the vlue and pause
+                      if we call the same function again the yield resume and returns the value and pause.</p>
+    <pre style="font-size: 17px;">
+        def topten():
+        yield 1
+        yield 2
+    
+    values=topten()
+    it=iter(values)
+    print(next(it))
+    print(next(it))
+
+                                 Output
+                                 ------
+                                 1
+                                 2
+
+    </pre>
+</body>
+</html>
