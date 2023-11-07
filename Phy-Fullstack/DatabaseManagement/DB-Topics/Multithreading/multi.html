@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Multithreading</u></center></h1>
+    <p>A running program in a process is called threading.</p>
+    <p>To use parllel work we will use multithread</p>
+</head>
+<body>
+    <h2>Creadtion of threads:</h2>
+    <ol>
+        <li>threading</li>
+        <li>_thread(deprecated)</li>
+    </ol>
+    <h2>
+<a href="./multiexp.html">Examples for Multithreading</a></h2>
+<h2>Lock method</h2>
+<p>A lock is a synchronization primitive used to control access to a shared resource in a 
+    multithreaded or multiprocessing environment. <br>It helps prevent multiple threads or 
+    processes from accessing the shared resource simultaneously,<br> which can lead to data 
+    corruption or unexpected behavior.<br>
+    
+     import threading<br>
+
+     threading.Lock()<br>
+    
+    </p>
+<h3>Example</h3>
+<pre style="font-size: 17px;">
+    from threading import*
+    import time
+    def Spend_Money(name):
+        print('hi',end="")
+        time.sleep(1)
+        print(name)
+    
+    name1='raja'
+    name2='rani'
+    
+    atm=Thread(target=Spend_Money,args=(name1,))
+    
+    online=Thread(target=Spend_Money,args=(name2,))
+    
+    atm.start()
+    online.start()
+
+</pre>
+<h2>RLock()</h2>
+<p>In Python, an RLock (Reentrant Lock) (recursive lock) is a type of lock that can be acquired multiple 
+    times by the same thread, allowing for nested locking. <br>
+    It ensures that a thread must release the lock as many times as it 
+    acquired it before other threads can acquire it.  </p>
+   <b> By using R lock we can open the lock</b>
+<h3>Example</h3>
+<pre style="font-size: 17px;">
+    import time
+    l=RLock()
+    def findFactorial(num):
+        l.acquire()
+        if num==0:
+            result=1
+        else:
+            result=num*findFactorial(num-1)    
+        l.release()
+        return result
+    def callFact(no):
+        print('result is ', findFactorial(no))
+    
+    t1=Thread(target=callFact,args=(5,))
+    t1.start()
+    
+    t2=Thread(target=callFact,args=(4,))
+    
+    t2.start()
+
+</pre>
+
+<h2>Semaphore</h2>
+<p>In Python, a Semaphore is a synchronization primitive that limits the number of simultaneous 
+    accesses to a shared resource.<br> It helps control access to a resource 
+    by maintaining a counter that decrements each time a thread acquires it,<br>
+     and increments when the thread releases it.  </p>
+     <b>My own understanding:If we have 10 times of task..we can print required times so we will use semaphore.</b>
+<h3>Example</h3>
+<pre style="font-size: 17px;">
+    import time
+    s=Semaphore(3)
+    def wish(name,age):
+        for i in range(3):
+            s.acquire()
+            print('Hii',end="")
+            time.sleep(1)
+            s.release()
+    t1=Thread(target=wish,args=('teju',26))
+    t2=Thread(target=wish,args=('Adi',30))
+    t3=Thread(target=wish,args=('varsh',16))
+    t4=Thread(target=wish,args=('Shivu',6))
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    </pre>
+</body>
+</html>
