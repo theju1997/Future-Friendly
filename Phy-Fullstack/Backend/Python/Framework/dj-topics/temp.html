@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+       <center><h1><u>How to add templates</u></h1></center>
+    <h2><pre style="font-size: 17px;">
+    Step1:Create one folder Template (Inside the project folder)
+        Inside the folder we have to create html files.
+        Login.html(we can write text to display)
+
+    Step2:In views.py 
+        Here we are using render in place of http response because to add html file.
+         def picture1(request):
+        return render (request,'movies.html')
+    
+    Step3:In settings.py
+        In this file We should add template direcotory
+
+            Import os (When we are using os we should import)
+
+        BASE_DIR = Path(__file__).resolve().parent.parent
+        TEMPLATE_DIR=os.path.join(BASE_DIR,’Template(htmlfoldername)’)
+        
+        TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [TEMPLATES_DIR], #we added this also when we are using template
+        }
+        ]
+    
+    Step 4:In url
+        In this file we shoul add path, html file name ,import views from appname
+        from drama import views
+        urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('login/',views.picture),
+        path('movies/',views.picture1),
+        ]
+    
+    </pre></h2>
+</body>
+</html>

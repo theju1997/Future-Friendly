@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(rgb(0, 213, 255),rgb(0, 255, 17));
+        }
+    </style>
+</head>
+<body>
+    <center><h1><u>How to add Images in Django project</u></h1></center>
+    <h2><pre style="font-size: 17px;">
+Step 1: Create one satatic folder (Inside the project folder)
+	Add images inside the static folder(pic.jpg)
+
+Step 2:In html file
+	By using image tag we should write in this way
+{%Load static%} (we should write this word in html file to load the images)
+
+img src="{%static 'images/pic1.jpg'%}" height="300px" width="300px"
+
+Step 3 :In settings.py file
+	In this file we should add static directory
+	And also we should add static url
+
+STATIC_DIR=os.path.join(BASE_DIR,'static')#to add static images we should write this line
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [STATIC_DIR ]
+                    	
+Step 4: In url file (No changes)
+</pre></h2>
+
+</body>
+</html>

@@ -10,7 +10,7 @@
         pragmatic design.</p>
         <style>
             body{
-               background: linear-gradient(#00b7ff, #ff0048);
+               background: linear-gradient(#e1e43d, rgb(68, 175, 175));
                      }
         </style>
 </head>
@@ -23,28 +23,56 @@
         Project—collections of application + configuration files.
         Application---task
     </pre>
-    <h1>How to create project folder</h1>
-    <pre style="font-size: 17px;">
-        Step 1- Go to any cmd(enter)
-        Step2-django-admin(enter)—it will give sub commonds
-        Step3-django-admin startproject  projectname ---it will create one folder-- inside the folder two file
-        Step 4-cd bankproject (to change directory to project name)
-        Step5-dir
-               -bankproject—1)bankproject---2)manange.py
+    <h1>How to create projectname and projectapp</h1>
+    <h3><pre style="font-size: 17px;">
+        Step 1:Any drive cmd (enter)
 
-        Inside - Bankproject
+        Step2:Django startproject Projectname(actors)
+                   1) actors(folder)
+                   2) manage.py
+           Inside actors-->__init__
+                             Asgi
+                             Settings
+                             Urls
+                             Wsgi
+        Step3:CD College(Change directory to project name)
 
-        1.__init__
-        2.--asgi—(asynchronize gate way inter face)
-        3.Settings 
-        4.Urls
-        5.Wsgi (web server grate way interface)
+        Step4:Django startapp drama
+                      Classes--->__init__
+                                Admin
+                                Apps
+                                Models
+                                Tests
+                                views
 
-        Step-6
-        <h2>To start server</h2>
-        Python manage.py runserver (we will get http://127.0.0.1:8000/)
+        Step 6: Start to write code in (Views)
+                    from django.http import HttpResponse     
+                    def student(request):
+                        return HttpResponse("Welcome to the cinema industry")
+        
+        Step7: Under project name (settings)
+                  Here we should add created app name in installed list
+                  [‘drama’]
+        
+        Step8:Under project name(Url)
+                  Here we should add path name and also we should import the path 
+                  From drama import views.picture
+                    urlpatterns = [
+                     path('admin/', admin.site.urls),
+                    path('',views.picture)
+                    ]
+        
+        Step9: Finally we should run from cd /project app/
+                        Python manage.py runserver 
+                                We will get one hosting address
+                                (copy the address then paste it in any browser to view the result)
+        
+        Step 10:We will get output on the screen what ever we written in the views
+    </pre></h3>
+    <h1><a href="./dj-topics/temp.html">How to add Template in Django</a></h1>
+    <h1><a href="./dj-topics/static.html">How to add Static Images in Django</a></h1>
+    <h1><a href="./dj-topics/connection.html">How to connect sqllite and Mysql in Django</a></h1>
 
-        copy the hosting address and paste it in google(enter)
-    </pre>
+
 </body>
 </html>
