@@ -27,7 +27,7 @@
     Step4:After the migrate we can check in database it will show the created table.
     
 <h3>To connect Django to Mysql</h3>
-TO CONNECT DJANGO TO SQLITE3
+<u>TO CONNECT DJANGO TO SQLITE3</u>
 Step 1: Open models.py file
 	Create one class 
 	class industry(models.Model):
@@ -39,10 +39,15 @@ Step 1: Open models.py file
 Step 2:Run to commands
  	Python manage.py makemigrations
 	Python manage.py migrate
+
 Step 3:After the makemigrations we can chek the file migration it will give created model list
+
 Step4:After the migrate we can check in database it will show the created table.
-TO CONNECT DJANGO TO MYSQL
+
+<u>TO CONNECT DJANGO TO MYSQL</u>
+
 Step 1:Make sure models are created or not 
+
 Step 2:   In models.py
 	In this file we should create one class and we should add the contents
 	from django.db import models
@@ -79,13 +84,20 @@ pymysql.install_as_MySQLdb()
 
 	add this commad to solve the error 
 	2)python manage.py migrate
+
 Step 5: Go to mysql check the table created are not  
 	Show tables;(to check the table is created or not)
 	select *from drama_industry; (we will get empty set)
 	describe drama_industry;(we will get complete created table)
 
-
     </pre></h2>    
-    
+    <h3>My Sql synatax</h3>
+    <ol>
+        <li>Show databases;(to see all database names)</li>
+        <li>Use database;(to use  required database)</li>
+        <li>show tables;(to see created table name)</li>
+        <li>select * from tablename;(we can see added objects inside the table)</li>
+        <li>describe info_peoples;(we can check fields)</li>
+    </ol>
 </body>
 </html>

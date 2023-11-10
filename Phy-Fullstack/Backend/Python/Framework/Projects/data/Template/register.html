@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<style>
+  .form-control{
+    width:200px;
+    border-radius: 10px;
+    border-color: black;
+    background-color: rgb(200, 162, 237);
+  }
+  .btn-primary{
+    width:200px;
+    border-color: black;
+    background-color: green;
+  }
+  body{background: linear-gradient(rgb(136, 235, 136),rgb(214, 163, 163));
+
+  }
+  .edit{
+    width: 500px; 
+            height: 600px; 
+            background-color: #3498db;
+            color: #fff; 
+            padding: 10px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba
+          
+  }
+  .check{
+    background-color: rgb(230, 65, 65);
+  }
+</style>
+  </head>
+<body>
+  <center>
+    <div class="edit">
+    <form action="" method="post"> {% csrf_token %}
+      <div class="container">
+        <div class="row">
+          <div class="col md-4">
+    <div class="mb-3">
+        <label for="" class="form-label">Enter your First_Name</label>
+        <input type="text" name="first_name" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Enter your Second_Name</label>
+        <input type="text" name="last_name" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Enter your age</label>
+        <input type="number" name="age" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Contact number</label>
+        <input type="number" name="contacts" class="form-control">
+      </div>
+         <!-- <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" name="pw" class="form-control" id="exampleInputPassword1">
+        </div> -->
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="check"  for="exampleCheck1">Check me out</label>
+        </div>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        </div>
+        </div>
+        </div>
+        </div>
+           
+      </form>
+      </center>
+      </center>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

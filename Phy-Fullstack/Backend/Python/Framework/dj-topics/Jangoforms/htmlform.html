@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Html form creation in django(custamised form)</u></center></h1>
+</head>
+<body>
+    <h2><pre style="font-size: 17px;">
+    Step 1- Create projectname(django-admin startproject)
+
+    Step 2-cd project name
+
+    Step3-create projectapp(django-admin projectapp)
+
+    Step4-add app name in settings.py
+
+    Step5-create one model in model.py
+        from django.db import models
+
+        # Create your models here.
+        class peoples(models.Model):
+            first_name = models.CharField(max_length=30)
+            last_name = models.CharField(max_length=30)
+            age = models.IntegerField()
+            contacts = models.IntegerField()
+            #email= models.EmailField()
+            #pw= models.CharField(max_length=30)
+ 
+    step6-In views.py 
+
+        from django.shortcuts import render
+        from .models import peoples
+        # Create your views here.
+        def display(request):
+            if request.method=='GET':
+                return render(request,'register.html')
+            else:
+                peoples(first_name = request.POST.get('first_name'),
+                        last_name = request.POST.get('last_name'),
+                        age =request.POST.get('age'),
+                        contacts =request.POST.get('contacts')).save()
+                        #email= request.POST.get('email')
+                        #pw= request.POST.get('pw')
+            return render(request,'succes.html')
+    step 7- Create one Template folder for html files
+              filename.html
+              In this file we can create our own form 
+
+    step 8- add html link in views .
+    
+    step 9- add path in url import views
+
+    step 10-settings.py 
+            add template directory
+            import os 
+
+    step 11-python manage.py makemigration 
+            python manage.py migrate   
+            python manage.py runserver     
+
+    step 12 -give input from the form and then check it in the table (sqplite 3 or mysql)        
+
+
+</body>
+</html>

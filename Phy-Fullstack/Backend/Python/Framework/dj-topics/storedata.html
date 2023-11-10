@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Store data by giving user input(maintained by admin)</u></center></h1>
+</head>
+<body>
+    <h2><pre style="font-size: 17px;">
+        Step 1- Create projectname(django-admin startproject)
+
+        Step 2-cd project name
+
+        Step3-create projectapp(django-admin projectapp)
+
+        Step4-add app name in settings.py
+
+        Step5-create one model in model.py
+
+        in models.py
+        from django.db import models
+        # Create your models here.
+        class peoples(models.Model):
+            first_name = models.CharField(max_length=30)
+            last_name = models.CharField(max_length=30)
+            age = models.IntegerField()
+            contacts = models.IntegerField()
+        
+        Step6-Register model in admin.py
+            from django.contrib import admin
+        from  .models import peoples
+        
+        # Register your models here.
+        admin.site.register(peoples)
+        
+        Step 7- python manage.py makemigration
+
+        Step 8- python manage.py migrate
+
+        Step 9-To register username and pw
+            Run this command(python manage.py createsuperuser)
+            Username : Thejaswini
+        Email address:
+        Password:
+        Password (again):
+        Superuser created successfully.
+
+        Step 10:python manage.py runserver
+
+        Step 11:we can check the created table in database
+
+        Step 12: http://127.0.0.1:8000/admin/
+                In this website we can add data
+        
+    </pre></h2>
+</body>
+</html>
