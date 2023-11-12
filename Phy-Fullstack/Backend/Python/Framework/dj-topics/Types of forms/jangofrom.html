@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>Jango Form creation</u></center></h1>
+</head>
+<body>
+    <h2><pre style="font-size: 17px;">
+        Create project name,project app name
+     Step1-Settings.py (add app name)
+            Using Mysql connection
+        ---Create database name
+        ---Use database name
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'details',
+                'USER': 'rooter',
+                'PASSWORD': 'admin',
+                'HOST':'localhost',
+                'PORT':'3306'
+            }
+        
+    Steps 2—Models.py
+        from django.db import models
+        
+        # Create your models here.
+        class StudentData(models.Model):
+            name=models.CharField(max_length=20)
+            age=models.IntegerField()
+            Gender=models.CharField(max_length=20)
+            date=models.DateField()
+        
+    Step3 –To run the server
+        -------python manage.py makemigration
+        if we get error add below synatax in __init__
+                   import pymysql
+                   pymysql.install_as_MySQLdb()
+        
+         -------python manage.py migrate
+    Step4- My sql commends to check tables 
+             Show tables;
+        Select *from studentdata;
+    Step5-   form.py(under app)
+        from django import forms
+        
+        class StudentForm(forms.Form):
+            name=forms.CharField(max_length=20)
+            age=forms.IntegerField()
+            Gender=forms.CharField(max_length=20)
+            date=forms.DateField()
+        
+    Step6-views.py
+        from django.shortcuts import render
+        from .models import StudentData
+        from .forms import StudentForm
+        # Create your views here.
+        def display(request):
+            if request.method=='GET':
+                form=StudentForm()
+                return render(request,'register.html',{'form':form})
+            else:
+                form=StudentForm(request.POST)
+                if form.is_valid():
+                    StudentData(
+                        name=form.cleaned_data['name'],
+                        age=form.cleaned_data['age'],
+                        Gender=form.cleaned_data['Gender'],
+                        date=form.cleaned_data['date'],
+                    ).save()
+                return render(request,'result1.html')
+    Step 7-create one template---register.html
+                Create display format(Inspect page and chcek html)
+        <!-- <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <h1>Student registration</h1>
+            <form action="" method="post">{%csrf_token%}
+                {{form.as_p}}
+            <input type="submit" value="submit">   
+            </form>
+        </body>
+        </html>
+         -->
+    Step 8-Result.
+        Create display format(Inspect page and chcek html)
+        
+        <!-- <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            <h1><center>Form Submitted Successfully</center></h1>
+        </body>
+        </html> -->
+    Step 9-settings .py
+        Import os 
+        Step1 add template path
+        TEMPLATES_DIR=os.path.join(BASE_DIR,'Template') 
+        Step2 add dir in templates
+        'DIRS': [TEMPLATES_DIR],
+        
+    Step 10-url.py
+        from stdinfo import views
+        
+        urlpatterns = [
+            path('admin/', admin.site.urls),
+            path('display/',views.display),
+        
+        </pre></h2>
+</body>
+</html>
