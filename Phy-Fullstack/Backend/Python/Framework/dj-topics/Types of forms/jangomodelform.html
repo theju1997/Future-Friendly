@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1><center><u>How to create D-jango modelform</u></center></h1>
+</head>
+<body>
+        <h2><pre style="font-size: 17px;">
+        Step 1-create one project
+        Step 2-create one app 
+        Step 3-setting add installed app name
+        Step 4-setting ----my sql configuration 
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'mdfdb',
+                'USER': 'rooter',
+                'PASSWORD': 'admin',
+                'HOST':'localhost',
+                'PORT':'3306'
+            }
+        
+        Step5-create database mdfdb(use mdfdb)
+        Step 6-python manage.py makemigration
+        Step 7-python manage.py migrate
+        Step 8-models.py
+        from django.db import models
+        
+        # Create your models here.
+        class StudentData(models.Model):
+            name=models.CharField(max_length=20)
+            age=models.IntegerField()
+            mob=models.BigIntegerField()
+            
+        
+        step 9-forms.py
+        from django import forms
+        from .models import StudentData
+        
+        class StudentForm(forms.ModelForm):
+            class Meta:
+                model=StudentData
+                fields="__all__"
+        
+        step10-views.py 
+        from django.shortcuts import render
+        from .forms import StudentForm 
+        
+        # Create your views here.
+        def show(request):
+            if request.method=='GET':
+                form=StudentForm()
+                return render(request,'index.html',{'form':form})
+            else:
+                form=StudentForm(request.POST)
+                if form.is_valid:
+                    form.save(commit=True)
+                return render(request,'img.html')
+        
+        step 11-Create one template folder
+        index.html
+         Student Details
+            form action="" method="post"{%csrf_token%}
+                {{form.as_p}}
+            input type="submit" value="submit" 
+            /form
+        
+        Step 12- Url.py
+        path('show/',views.show),
+        
+        
+        step 13-
+        python manage.py makemigrations
+        python manage.py migrate
+        python manage.py runserver
+           
+    </pre></h2>
+    <a href="/Python/Framework/Projects/djform/">Example with project</a>
+
+</body>
+</html>
