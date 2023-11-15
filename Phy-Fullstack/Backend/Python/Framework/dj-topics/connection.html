@@ -8,26 +8,7 @@
 </head>
 <body>
     <h2><pre style="font-size: 17px;">
-        <h3>To connect django to sqllite3</h3>
-    Step 1: Open models.py file
-        Create one class 
-
-        class industry(models.Model):
-        actor_name = models.CharField(max_length=30)
-        first_movie = models.CharField(max_length=30)
-        second_movie = models.CharField(max_length=30)
-        release_date = models.DateField()
-    
-    Step 2:Run to commands
-         Python manage.py makemigrations
-        Python manage.py migrate
-
-    Step 3:After the makemigrations we can chek the file migration it will give created model list
-    
-    Step4:After the migrate we can check in database it will show the created table.
-    
-<h3>To connect Django to Mysql</h3>
-<u>TO CONNECT DJANGO TO SQLITE3</u>
+<h3><u>TO CONNECT DJANGO TO SQLITE3</u></h3>
 Step 1: Open models.py file
 	Create one class 
 	class industry(models.Model):
@@ -40,11 +21,14 @@ Step 2:Run to commands
  	Python manage.py makemigrations
 	Python manage.py migrate
 
-Step 3:After the makemigrations we can chek the file migration it will give created model list
+Step 3:Setting.py 
+        No need to change connection by default it connected to sqllite3
 
-Step4:After the migrate we can check in database it will show the created table.
+Step 4:After the makemigrations we can chek the file migration it will give created model list
 
-<u>TO CONNECT DJANGO TO MYSQL</u>
+Step 5:After the migrate we can check in database it will show the created table.
+
+<h3><u>TO CONNECT DJANGO TO MYSQL</u></h3>
 
 Step 1:Make sure models are created or not 
 
