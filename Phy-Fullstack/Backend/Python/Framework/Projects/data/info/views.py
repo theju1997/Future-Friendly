@@ -11,4 +11,4 @@ def display(request):
                 contacts =request.POST.get('contacts')).save()
                 #email= request.POST.get('email')
                 #pw= request.POST.get('pw')
-    return render(request,'succes.html')
+    return render(request,'success.html')

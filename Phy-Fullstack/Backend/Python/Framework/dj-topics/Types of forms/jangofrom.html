@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <h1><center><u>Jango Form creation</u></center></h1>
+    <h1><center><u>By using (Models.py)</u></center></h1>
 </head>
 <body>
     <h2><pre style="font-size: 17px;">
@@ -73,36 +73,19 @@
                 return render(request,'result1.html')
     Step 7-create one template---register.html
                 Create display format(Inspect page and chcek html)
-        <!-- <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <h1>Student registration</h1>
-            <form action="" method="post">{%csrf_token%}
+        '''
+            Student registration
+            form action="" method="post">{%csrf_token%}
                 {{form.as_p}}
-            <input type="submit" value="submit">   
-            </form>
-        </body>
-        </html>
-         -->
+            input type="submit" value="submit"  
+            /form'''
+       
     Step 8-Result.
         Create display format(Inspect page and chcek html)
         
-        <!-- <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-        </head>
-        <body>
-            <h1><center>Form Submitted Successfully</center></h1>
-        </body>
-        </html> -->
+        Giving one messege 
+           Form Submitted Successfully
+       
     Step 9-settings .py
         Import os 
         Step1 add template path

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% extends 'base.html' %}
+</head>
+<body>
+    {% block b1 %}
+    <h2 style="color: brown;"><center><u>Feedback Form</u></center></h2>
+    <form action="" method="post">{%csrf_token%}
+    <label for="">Enter the Name</label>
+    <input type="text" value="" name="name"  placeholder="Name"  class="form-control col col-6" >
+    <label for="">Enter Email ID</label>
+    <input type="email" value="" name="email" placeholder="Email" class="form-control col col-6">
+    <label for="">Ratings(Out of 10)</label>
+    <input type="number" value="" name="ratings" placeholder="Number" class="form-control col col-6">
+    <label for="">Valuable Feedback</label><br>
+    <!-- <input type="" value="" name="feedback" placeholder="Enter Comment" class="form-control col col-6"> -->
+    <textarea name="feedback" id="" cols="50" rows="5" placeholder="feedback"></textarea>
+    <br><br>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-danger">Cancel</button>
+    </form>
+    {% endblock b1 %}
+    <table>
+        <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>ratings</th>
+            <th>feedback</th>
+        </tr>
+        <tbody class="table-secondary">
+            {% for i in data %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.ratings}}</td>
+                <td>{{i.feedback}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>    
+
+    </table>
+    
+</body>
+</html>

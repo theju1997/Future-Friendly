@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% extends 'base.html' %}
+</head>
+<body>
+{% load static %}
+
+    {% block b1 %}
+    
+    <center><h1 style="background: linear-gradient(red,blue); color: azure;">Memories</h1></center>
+    <br>
+    <img src="{% static 'images/python.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/frnt.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/cls.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/clf.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/th.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/fd.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/b.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/cf.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/cls.jpg' %}" height="200px" , width="300px">&nbsp;&nbsp;
+    <img src="{% static 'images/frnt.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/img.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/python.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+    <img src="{% static 'images/th.jpg' %}" height="200px" , width="col-md-2">&nbsp;&nbsp;
+<br><br>
+<br>
+    <form enctype= "multipart/form-data" action="" method="post">{% csrf_token %}
+    
+        <p>Upload File: <input type="file" name="upload" /></p>
+                  
+        <p><input type="submit" value="Upload" /></p>
+         
+    </form>
+
+
+    {% endblock b1 %}
+    
+</body>
+</html>

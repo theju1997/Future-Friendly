@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% extends 'base.html' %}
+   
+</head>
+<body>
+{% load static %}
+
+    {% block b1 %}
+    
+    <center><img src="{% static 'images/img.jpg' %}" height="10%" width="10%"></center>
+    <center><img src="{% static 'images/web.jpg' %}" height="20%" width="50%"></center>
+    <center><h2>Apponix Team </h2></center>
+    {% endblock b1 %}
+    
+</body>
+</html>
