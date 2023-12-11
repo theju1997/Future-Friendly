@@ -1,6 +1,6 @@
-from django import forms
 
-from django.db import models
+from django import forms
+from .models import Catagory
 
 class ReviewForm(forms.Form):
     name = forms.CharField(max_length=20)
@@ -8,5 +8,8 @@ class ReviewForm(forms.Form):
     ratings = forms.IntegerField()
     feedback = forms.CharField(widget=forms.Textarea)
 
-class UploadedImage(models.Model):
-    image = models.ImageField(upload_to='uploaded_images/')    
+class CatagoryForm(forms.ModelForm):
+    class Meta:
+        model=Catagory
+        fields='__all__'
+ 

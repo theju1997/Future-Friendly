@@ -19,6 +19,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from thrill import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('appo/',views.appo,name='appo'),
@@ -27,9 +28,9 @@ urlpatterns = [
     path('serv/',views.serv,name='serv'),
     path('contact/',views.contact,name='contact'),
     path('feed/',views.feed,name='feed'),
-    path('gal/',views.gal,name='gal'),
-    path('review/',views.review,name='review'),
-   
+    path('images/',views.collection,name='collection'),
+    
+      
 ]
 
  

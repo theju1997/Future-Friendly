@@ -20,7 +20,7 @@ from marksapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.nextpage),
+    path('nextpage/',views.nextpage),
     path('add_student/',views.add_student,name='addstudent'),
     path('update_data/<id>',views.update_data,name='update_data'),
     path('save_update_data/<id>',views.save_update_data,name='save_update_data'),
