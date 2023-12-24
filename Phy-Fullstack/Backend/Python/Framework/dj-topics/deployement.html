@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center>Project Deployement in pythonanywhere</center></h1>
+    <p>By using python anywhere ,we can deployee python django projec</p>
+    <h2>Follow the steps</h2>
+    <pre style="font-size: 17px;">
+            Before upload git hub(in cmd)
+
+        1.	Pip freeze>requirements.txt
+        2.	Git add 
+        3.	Git commit
+        4.	Git push
+
+            Bash in python anywhere
+
+        5.	Git clone (project url)
+        6.	Mkvirtualenv theju
+        7.	Pwd
+        8.	Ls
+        9.	Cd repository name 
+        10.	Ls
+        11.	cd project name 
+        12.	pip install django
+        13.	pip install mysqlclinet
+        14.	pip install –r requirements.txt
+
+                To create database (on top right side click on database)
+
+        file-inside project-setting changes after creating database(host name , name, user, pw , port emty)
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'Thejusweety$Powerfull',
+                'USER': 'Thejusweety',
+                'PASSWORD': 'theju@143',
+                'HOST':'Thejusweety.mysql.pythonanywhere-services.com',
+                'PORT':'',
+            }
+        }
+        
+        •	Python  manage.py makemigrations
+        •	Python manage.py migrate
+        Static file changes(Inside web)
+        url --/static/
+        dir-- https://www.pythonanywhere.com/user/Thejusweety/webapps/# 
+        
+        (copied this link from project to static file)
+        
+    </pre>
+</body>
+</html>
