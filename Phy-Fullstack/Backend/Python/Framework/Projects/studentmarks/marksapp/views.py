@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import StudentData
 
+
 # Create your views here.
 def nextpage(request):
     stdform=StudentData.objects.all()
